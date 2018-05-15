@@ -12,7 +12,7 @@
     "noUnusedParameters": true,
     "sourceMap": true,
     "target": "ES5",
-    "lib": ["dom", "es7", "scripthost", "es2015.promise"],
+    "lib": ["dom", "esnext"],
     "typeRoots": ["../**/*", "../../node_modules/@types/"]
   },
   "exclude": ["./assets/"]

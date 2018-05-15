@@ -12,7 +12,7 @@
     "target": "ES6",
     "lib": ["dom.iterable", "scripthost", "es2017"],
     "typeRoots": ["../**/*", "../../node_modules/@types/"],
-    "outDir": "../../dist",
+    "outDir": "../../dist/server",
     "experimentalDecorators": true
   },
   "include": ["./**/*"]
