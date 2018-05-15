@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "module": "commonjs",
+    "removeComments": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "sourceMap": true,
+    "target": "ES6",
+    "lib": ["dom.iterable", "scripthost", "es2017"],
+    "typeRoots": ["../**/*", "../../node_modules/@types/"],
+    "outDir": "../../dist",
+    "experimentalDecorators": true
+  },
+  "include": ["./**/*"]
+}

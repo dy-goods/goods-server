@@ -1,0 +1,52 @@
+#app {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  position: relative;
+  .error-hint {
+    color: #FF6946;
+  }
+}
+body{
+  font-family: 'Microsoft Yahei','Helvetica Neue',Helvetica,Arial,sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #333;
+  word-break: break-all;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+span {
+  display: block;
+}
+
+button {
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border-style: none;
+}
+
+button:focus {
+  outline: 0;
+}
+* {
+  user-select: none;
+}

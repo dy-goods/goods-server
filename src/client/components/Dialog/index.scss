@@ -1,0 +1,53 @@
+:global {
+  .c-dialog-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4999;
+    background-color: rgba(0, 0, 0, .4);
+    transition: all .3s cubic-bezier(.4, 0, 0, 1.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .c-dialog-wrap-enter {
+    opacity: 0.1;
+    .c-dialog {
+      transform: scale(0.6, 0.6);
+    }
+  }
+  .c-dialog-wrap-enter-active,
+  .c-dialog-wrap-enter-done {
+    opacity: 1;
+  }
+  .c-dialog-wrap-exit {
+    opacity: 1;
+  }
+  .c-dialog-wrap-exit-active,
+  .c-dialog-wrap-exit-done {
+    opacity: 0.1;
+    .c-dialog {
+      transform: scale(0.6, 0.6);
+    }
+  }
+  .c-dialog {
+    position: relative;
+    background-color: #fff;
+    z-index: 999;
+    background: #FCF8ED;
+    border-radius: 8px;
+    transition: all .3s cubic-bezier(.4, 0, 0, 1.5);
+
+    .icon-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 18px;
+      color: #D7C0AC;
+      cursor: pointer;
+      z-index: 99;
+    }
+  }
+}
