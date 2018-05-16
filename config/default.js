@@ -9,5 +9,5 @@ module.exports = {
   webpack: {
     port: 9091,
   },
-  onlineHost: '//s0.test.net/bs/fe.seed',
+  onlineHost: '//s0.test.net/bs/fe.seed'
 };

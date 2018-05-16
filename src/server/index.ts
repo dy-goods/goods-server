@@ -1,4 +1,5 @@
 import * as config from 'config';
+
 if (config.get('isDev')) {
   require('./dev-server');
 } else {

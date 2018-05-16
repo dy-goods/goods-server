@@ -7,3 +7,4 @@ node_modules
 statics
 src/.DS_Store
 buildMeta.json
+test.sqlite
