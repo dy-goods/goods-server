@@ -10,7 +10,7 @@
     "noUnusedParameters": true,
     "sourceMap": true,
     "target": "ES6",
-    "lib": ["dom.iterable", "scripthost", "es2017"],
+    "lib": ["dom.iterable", "scripthost", "es2017", "esnext"],
     "typeRoots": ["./**/*", "../../node_modules/@types/"],
     "outDir": "../../dist/server",
     "experimentalDecorators": true,

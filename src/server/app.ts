@@ -4,8 +4,6 @@ import routes from './routes';
 import * as bodyParser from 'koa-bodyparser';
 import gql from './gql';
 
-import './gql/models/test';
-
 const app = new Koa();
 
 app.use(require('koa-compress')());
