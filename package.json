@@ -6,17 +6,18 @@
   "license": "MIT",
   "scripts": {
     "start": "./node_modules/.bin/pm2 start scripts/pm2.json --no-daemon",
-    "compile": "rm -r dist; tsc -w -p src/server",
-    "dev": "NODE_ENV=development node --inspect=9099 dist/server/",
+    "watch": "tsc -p src/server -w --pretty",
+    "serve": "NODE_ENV=development node --inspect=9099 dist/server/",
+    "dev":
+      "rm -rf ./dist/* && tsc -p src/server && concurrently --names \"TSC,NODE\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm run watch\" \"npm run serve\"",
     "build": "NODE_ENV=production node scripts/build",
-    "lint.client": "tslint -p src/client/tsconfig.json -e *.d.ts -c tslint.json",
-    "lint.server": "tslint -p src/server/tsconfig.json -e *.d.ts -c tslint.json",
+    "lint.client":
+      "tslint -p src/client/tsconfig.json -e *.d.ts -c tslint.json",
+    "lint.server":
+      "tslint -p src/server/tsconfig.json -e *.d.ts -c tslint.json",
     "lint.fix": "prettier --write \"./**/*.{js,tsx,ts}\""
   },
-  "pre-commit": [
-    "lint.client",
-    "lint.server"
-  ],
+  "pre-commit": ["lint.client", "lint.server"],
   "dependencies": {
     "axios": "^0.15.3",
     "config": "^1.25.1",
