@@ -1,18 +1,21 @@
 import * as path from 'path';
 import * as config from 'config';
-import { route } from './decorator'
+import { route } from './decorator';
 
 /**
  * 前端构建信息
  */
 let buildMeta: {
-  [chunk: string]: string
+  [chunk: string]: string;
 } = {};
 
 if (!config.get('isDev')) {
   try {
-    buildMeta = require(path.join(config.get('root') as string, 'buildMeta.json'));
-  } catch (e) { }
+    buildMeta = require(path.join(
+      config.get('root') as string,
+      'buildMeta.json',
+    ));
+  } catch (e) {}
 }
 
 /**
@@ -20,11 +23,13 @@ if (!config.get('isDev')) {
  */
 function fileResolver(file: string) {
   if (config.get('isDev')) {
-    return `http://${require('ip').address()}:${config.get('webpack.port')}${file}`;
+    return `http://${require('ip').address()}:${config.get(
+      'webpack.port',
+    )}${file}`;
   } else {
     return `${config.get('onlineHost')}/@${file}`;
   }
-};
+}
 
 export class EntryController {
   @route('get', '/')
@@ -36,7 +41,7 @@ export class EntryController {
 
     const isProd = config.get('isProd');
     const browserConfig = {
-      prod: isProd
+      prod: isProd,
     };
 
     return `<html>

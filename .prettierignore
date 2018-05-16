@@ -1,0 +1,13 @@
+/dist
+node_modules
+public
+*.log
+.idea
+.DS_Store
+.vscode
+statics
+src/.DS_Store
+buildMeta.json
+/typings
+typings.json
+/pack

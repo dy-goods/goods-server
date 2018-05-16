@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const config = require('config');
 const path = require('path');
 const root = config.get('root'); // webpack want absolute path
-
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const tsConfig = require(path.resolve(root, './src/client/tsconfig'));
 const clientTsOptions = Object.assign({}, tsConfig);
 
@@ -15,13 +15,12 @@ const webpackConfig = {
       {
         test: /\.tsx?$/,
         use: {
-          loader: 'awesome-typescript-loader',
-          options: clientTsOptions,
+          loader: 'ts-loader',
         },
         exclude: [/node_modules/],
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: ['style-loader', 'css-loader?minimize', 'postcss-loader'],
       },
       {
@@ -44,6 +43,14 @@ const webpackConfig = {
           },
         },
       },
+    ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js', '.json', 'scss', 'css'],
+    plugins: [
+      new TsconfigPathsPlugin({
+        configFile: path.resolve(root, './src/client/tsconfig.json'),
+      }),
     ],
   },
 };

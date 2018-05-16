@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Dialog from '../../components/Dialog';
 
 import './index.scss';
 
@@ -14,7 +15,8 @@ export default class TestPage extends React.Component<IProps, IState> {
   render() {
     return (
       <div className="test-page">
-        <h1>测试</h1>
+        <Dialog />
+        <h1>测试1</h1>
       </div>
     );
   }

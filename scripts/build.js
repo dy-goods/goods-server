@@ -34,17 +34,17 @@ async function buildClientCode() {
         const info = state.toJson({
           chunks: false,
         });
-        if (state.hasErrors()) {
-          info.errors.forEach(e => {
-            console.error('ERROR:', e); // 打印错误
-          });
-        }
         if (state.hasWarnings()) {
           info.warnings.forEach(warn => {
             console.warn('WARN:', warn); // 打印报警
           });
         }
-        return reject(new Error('compile faild'));
+        if (state.hasErrors()) {
+          info.errors.forEach(e => {
+            console.error('ERROR:', e); // 打印错误
+          });
+          return reject(new Error('compile faild'));
+        }
       }
 
       // 将构建信息写入 buildMeta.json 文件中

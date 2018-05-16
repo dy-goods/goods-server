@@ -13,7 +13,8 @@
     "lib": ["dom.iterable", "scripthost", "es2017"],
     "typeRoots": ["../**/*", "../../node_modules/@types/"],
     "outDir": "../../dist/server",
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "baseUrl": "."
   },
-  "include": ["./**/*"]
+  "include": ["**/*"]
 }

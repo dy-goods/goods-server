@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { bindMethod } from '../../../utils';
-import Dialog from '../index';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { bindMethod } from '../../utils';
+import Dialog from '../Dialog';
 import './index.scss';
-import classnames from 'classnames';
+import * as classnames from 'classnames';
 
 export type AlertProps = {
   immediate?: boolean; // 是否是即时性的，即由 alert() 产生
