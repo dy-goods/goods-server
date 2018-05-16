@@ -6,7 +6,10 @@ const root = config.get('root'); // webpack want absolute path
 const merge = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.base');
 
+// 如何把 webpack-dev-server 的 hot-load 通知到 node server
+// http://www.boiajs.com/2015/08/25/webpack-dev-server-and-express-server
 const webpackConfig = merge(baseWebpackConfig, {
+  mode: 'development',
   entry: {
     app: [
       path.resolve(root, './src/client/main.tsx'),

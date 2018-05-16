@@ -27,28 +27,27 @@ async function buildClientCode() {
   rmrf(path.join(config.get('root'), 'statics'));
   const webpackConfig = require(path.join(root, 'config/webpack.prod.js'));
   await new Promise((resolve, reject) => {
-    webpack(webpackConfig, (err, state) => {
+    webpack(webpackConfig, (err, stats) => {
       if (err) return reject(err);
 
-      if (state.hasErrors() || state.hasWarnings()) {
-        const info = state.toJson({
+      process.stdout.write(
+        stats.toString({
+          colors: true,
+          modules: false,
+          children: false,
           chunks: false,
-        });
-        if (state.hasWarnings()) {
-          info.warnings.forEach(warn => {
-            console.warn('WARN:', warn); // 打印报警
-          });
-        }
-        if (state.hasErrors()) {
-          info.errors.forEach(e => {
-            console.error('ERROR:', e); // 打印错误
-          });
+          chunkModules: false,
+        }) + '\n\n',
+      );
+
+      if (stats.hasErrors() || stats.hasWarnings()) {
+        if (stats.hasErrors()) {
           return reject(new Error('compile faild'));
         }
       }
 
       // 将构建信息写入 buildMeta.json 文件中
-      const result = state.toJson();
+      const result = stats.toJson();
       fs.writeFileSync(
         path.join(root, 'buildMeta.json'),
         JSON.stringify(result.assetsByChunkName),

@@ -12,6 +12,14 @@ const compiler = webpack(webpackConfig);
 const server = new WebpackDevServer(compiler, {
   publicPath: webpackConfig.output.publicPath,
   hot: true,
+  progress: true,
+  stats: {
+    colors: true,
+    modules: false,
+    children: false,
+    chunks: false,
+    chunkModules: false,
+  },
   headers: {
     'Access-Control-Allow-Origin': '*',
   },

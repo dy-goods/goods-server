@@ -4,11 +4,7 @@ const config = require('config');
 const path = require('path');
 const root = config.get('root'); // webpack want absolute path
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
-const tsConfig = require(path.resolve(root, './src/client/tsconfig'));
-const clientTsOptions = Object.assign({}, tsConfig);
 
-// 如何把 webpack-dev-server 的 hot-load 通知到 node server
-// http://www.boiajs.com/2015/08/25/webpack-dev-server-and-express-server
 const webpackConfig = {
   module: {
     rules: [
@@ -17,11 +13,15 @@ const webpackConfig = {
         use: {
           loader: 'ts-loader',
         },
-        exclude: [/node_modules/],
+        exclude: /node_modules/,
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader?minimize', 'postcss-loader'],
+        use: [
+          'style-loader',
+          'css-loader?minimize',
+          'postcss-loader',
+        ],
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -52,7 +52,7 @@ const webpackConfig = {
         configFile: path.resolve(root, './src/client/tsconfig.json'),
       }),
     ],
-  },
+  }
 };
 
 module.exports = webpackConfig;
