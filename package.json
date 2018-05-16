@@ -8,8 +8,9 @@
     "start": "./node_modules/.bin/pm2 start scripts/pm2.json --no-daemon",
     "watch": "tsc -p src/server -w --pretty",
     "serve": "NODE_ENV=development node --inspect=9099 dist/server/",
+    "predev": "rm -rf ./dist/* && tsc -p src/server",
     "dev":
-      "rm -rf ./dist/* && tsc -p src/server && concurrently --names \"TSC,NODE\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm run watch\" \"npm run serve\"",
+      "concurrently --names \"TSC,NODE\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm run watch\" \"npm run serve\"",
     "build": "NODE_ENV=production node scripts/build",
     "lint.client":
       "tslint -p src/client/tsconfig.json -e *.d.ts -c tslint.json",
