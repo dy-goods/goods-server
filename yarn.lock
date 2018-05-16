@@ -239,122 +239,6 @@
   dependencies:
     "@types/node" "*"
 
-"@webassemblyjs/ast@1.4.3":
-  version "1.4.3"
-  resolved "http://r.npm.sankuai.com/@webassemblyjs/ast/download/@webassemblyjs/ast-1.4.3.tgz#3b3f6fced944d8660273347533e6d4d315b5934a"
-  dependencies:
-    "@webassemblyjs/helper-wasm-bytecode" "1.4.3"
-    "@webassemblyjs/wast-parser" "1.4.3"
-    debug "^3.1.0"
-    webassemblyjs "1.4.3"
-
-"@webassemblyjs/floating-point-hex-parser@1.4.3":
-  version "1.4.3"
-  resolved "http://r.npm.sankuai.com/@webassemblyjs/floating-point-hex-parser/download/@webassemblyjs/floating-point-hex-parser-1.4.3.tgz#f5aee4c376a717c74264d7bacada981e7e44faad"
-
-"@webassemblyjs/helper-buffer@1.4.3":
-  version "1.4.3"
-  resolved "http://r.npm.sankuai.com/@webassemblyjs/helper-buffer/download/@webassemblyjs/helper-buffer-1.4.3.tgz#0434b55958519bf503697d3824857b1dea80b729"
-  dependencies:
-    debug "^3.1.0"
-
-"@webassemblyjs/helper-code-frame@1.4.3":
-  version "1.4.3"
-  resolved "http://r.npm.sankuai.com/@webassemblyjs/helper-code-frame/download/@webassemblyjs/helper-code-frame-1.4.3.tgz#f1349ca3e01a8e29ee2098c770773ef97af43641"
-  dependencies:
-    "@webassemblyjs/wast-printer" "1.4.3"
-
-"@webassemblyjs/helper-fsm@1.4.3":
-  version "1.4.3"
-  resolved "http://r.npm.sankuai.com/@webassemblyjs/helper-fsm/download/@webassemblyjs/helper-fsm-1.4.3.tgz#65a921db48fb43e868f17b27497870bdcae22b79"
-
-"@webassemblyjs/helper-wasm-bytecode@1.4.3":
-  version "1.4.3"
-  resolved "http://r.npm.sankuai.com/@webassemblyjs/helper-wasm-bytecode/download/@webassemblyjs/helper-wasm-bytecode-1.4.3.tgz#0e5b4b5418e33f8a26e940b7809862828c3721a5"
-
-"@webassemblyjs/helper-wasm-section@1.4.3":
-  version "1.4.3"
-  resolved "http://r.npm.sankuai.com/@webassemblyjs/helper-wasm-section/download/@webassemblyjs/helper-wasm-section-1.4.3.tgz#9ceedd53a3f152c3412e072887ade668d0b1acbf"
-  dependencies:
-    "@webassemblyjs/ast" "1.4.3"
-    "@webassemblyjs/helper-buffer" "1.4.3"
-    "@webassemblyjs/helper-wasm-bytecode" "1.4.3"
-    "@webassemblyjs/wasm-gen" "1.4.3"
-    debug "^3.1.0"
-
-"@webassemblyjs/leb128@1.4.3":
-  version "1.4.3"
-  resolved "http://r.npm.sankuai.com/@webassemblyjs/leb128/download/@webassemblyjs/leb128-1.4.3.tgz#5a5e5949dbb5adfe3ae95664d0439927ac557fb8"
-  dependencies:
-    leb "^0.3.0"
-
-"@webassemblyjs/validation@1.4.3":
-  version "1.4.3"
-  resolved "http://r.npm.sankuai.com/@webassemblyjs/validation/download/@webassemblyjs/validation-1.4.3.tgz#9e66c9b3079d7bbcf2070c1bf52a54af2a09aac9"
-  dependencies:
-    "@webassemblyjs/ast" "1.4.3"
-
-"@webassemblyjs/wasm-edit@1.4.3":
-  version "1.4.3"
-  resolved "http://r.npm.sankuai.com/@webassemblyjs/wasm-edit/download/@webassemblyjs/wasm-edit-1.4.3.tgz#87febd565e0ffb5ae25f6495bb3958d17aa0a779"
-  dependencies:
-    "@webassemblyjs/ast" "1.4.3"
-    "@webassemblyjs/helper-buffer" "1.4.3"
-    "@webassemblyjs/helper-wasm-bytecode" "1.4.3"
-    "@webassemblyjs/helper-wasm-section" "1.4.3"
-    "@webassemblyjs/wasm-gen" "1.4.3"
-    "@webassemblyjs/wasm-opt" "1.4.3"
-    "@webassemblyjs/wasm-parser" "1.4.3"
-    "@webassemblyjs/wast-printer" "1.4.3"
-    debug "^3.1.0"
-
-"@webassemblyjs/wasm-gen@1.4.3":
-  version "1.4.3"
-  resolved "http://r.npm.sankuai.com/@webassemblyjs/wasm-gen/download/@webassemblyjs/wasm-gen-1.4.3.tgz#8553164d0154a6be8f74d653d7ab355f73240aa4"
-  dependencies:
-    "@webassemblyjs/ast" "1.4.3"
-    "@webassemblyjs/helper-wasm-bytecode" "1.4.3"
-    "@webassemblyjs/leb128" "1.4.3"
-
-"@webassemblyjs/wasm-opt@1.4.3":
-  version "1.4.3"
-  resolved "http://r.npm.sankuai.com/@webassemblyjs/wasm-opt/download/@webassemblyjs/wasm-opt-1.4.3.tgz#26c7a23bfb136aa405b1d3410e63408ec60894b8"
-  dependencies:
-    "@webassemblyjs/ast" "1.4.3"
-    "@webassemblyjs/helper-buffer" "1.4.3"
-    "@webassemblyjs/wasm-gen" "1.4.3"
-    "@webassemblyjs/wasm-parser" "1.4.3"
-    debug "^3.1.0"
-
-"@webassemblyjs/wasm-parser@1.4.3":
-  version "1.4.3"
-  resolved "http://r.npm.sankuai.com/@webassemblyjs/wasm-parser/download/@webassemblyjs/wasm-parser-1.4.3.tgz#7ddd3e408f8542647ed612019cfb780830993698"
-  dependencies:
-    "@webassemblyjs/ast" "1.4.3"
-    "@webassemblyjs/helper-wasm-bytecode" "1.4.3"
-    "@webassemblyjs/leb128" "1.4.3"
-    "@webassemblyjs/wasm-parser" "1.4.3"
-    webassemblyjs "1.4.3"
-
-"@webassemblyjs/wast-parser@1.4.3":
-  version "1.4.3"
-  resolved "http://r.npm.sankuai.com/@webassemblyjs/wast-parser/download/@webassemblyjs/wast-parser-1.4.3.tgz#3250402e2c5ed53dbe2233c9de1fe1f9f0d51745"
-  dependencies:
-    "@webassemblyjs/ast" "1.4.3"
-    "@webassemblyjs/floating-point-hex-parser" "1.4.3"
-    "@webassemblyjs/helper-code-frame" "1.4.3"
-    "@webassemblyjs/helper-fsm" "1.4.3"
-    long "^3.2.0"
-    webassemblyjs "1.4.3"
-
-"@webassemblyjs/wast-printer@1.4.3":
-  version "1.4.3"
-  resolved "http://r.npm.sankuai.com/@webassemblyjs/wast-printer/download/@webassemblyjs/wast-printer-1.4.3.tgz#3d59aa8d0252d6814a3ef4e6d2a34c9ded3904e0"
-  dependencies:
-    "@webassemblyjs/ast" "1.4.3"
-    "@webassemblyjs/wast-parser" "1.4.3"
-    long "^3.2.0"
-
 abbrev@1:
   version "1.1.1"
   resolved "http://r.npm.sankuai.com/abbrev/download/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -366,11 +250,15 @@ accepts@^1.2.2, accepts@~1.3.4, accepts@~1.3.5:
     mime-types "~2.1.18"
     negotiator "0.6.1"
 
-acorn-dynamic-import@^3.0.0:
-  version "3.0.0"
-  resolved "http://r.npm.sankuai.com/acorn-dynamic-import/download/acorn-dynamic-import-3.0.0.tgz#901ceee4c7faaef7e07ad2a47e890675da50a278"
+acorn-dynamic-import@^2.0.0:
+  version "2.0.2"
+  resolved "http://r.npm.sankuai.com/acorn-dynamic-import/download/acorn-dynamic-import-2.0.2.tgz#c752bd210bef679501b6c6cb7fc84f8f47158cc4"
   dependencies:
-    acorn "^5.0.0"
+    acorn "^4.0.3"
+
+acorn@^4.0.3:
+  version "4.0.13"
+  resolved "http://r.npm.sankuai.com/acorn/download/acorn-4.0.13.tgz#105495ae5361d697bd195c825192e1ad7f253787"
 
 acorn@^5.0.0:
   version "5.5.3"
@@ -388,11 +276,15 @@ adjust-sourcemap-loader@^1.1.0:
     object-path "^0.9.2"
     regex-parser "^2.2.9"
 
+ajv-keywords@^2.0.0:
+  version "2.1.1"
+  resolved "http://r.npm.sankuai.com/ajv-keywords/download/ajv-keywords-2.1.1.tgz#617997fc5f60576894c435f940d819e135b80762"
+
 ajv-keywords@^3.1.0:
   version "3.2.0"
   resolved "http://r.npm.sankuai.com/ajv-keywords/download/ajv-keywords-3.2.0.tgz#e86b819c602cf8821ad637413698f1dec021847a"
 
-ajv@^5.0.0:
+ajv@^5.0.0, ajv@^5.1.5:
   version "5.5.2"
   resolved "http://r.npm.sankuai.com/ajv/download/ajv-5.5.2.tgz#73b5eeca3fab653e3d3f9422b341ad42205dc965"
   dependencies:
@@ -447,6 +339,10 @@ ansi-regex@^0.2.0, ansi-regex@^0.2.1:
 ansi-regex@^2.0.0:
   version "2.1.1"
   resolved "http://r.npm.sankuai.com/ansi-regex/download/ansi-regex-2.1.1.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"
+
+ansi-regex@^3.0.0:
+  version "3.0.0"
+  resolved "http://r.npm.sankuai.com/ansi-regex/download/ansi-regex-3.0.0.tgz#ed0317c322064f79466c02966bddb605ab37d998"
 
 ansi-styles@^1.1.0:
   version "1.1.0"
@@ -594,7 +490,7 @@ async@1.5, async@^1.5, async@^1.5.2:
   version "1.5.2"
   resolved "http://r.npm.sankuai.com/async/download/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
 
-async@^2.5:
+async@^2.1.2, async@^2.5:
   version "2.6.0"
   resolved "http://r.npm.sankuai.com/async/download/async-2.6.0.tgz#61a29abb6fcc026fea77e56d1c6ec53a795951f4"
   dependencies:
@@ -614,6 +510,19 @@ autoprefixer@^6.3.1:
     num2fraction "^1.2.2"
     postcss "^5.2.16"
     postcss-value-parser "^3.2.3"
+
+awesome-typescript-loader@3.4.1:
+  version "3.4.1"
+  resolved "http://r.npm.sankuai.com/awesome-typescript-loader/download/awesome-typescript-loader-3.4.1.tgz#22fa49800f0619ec18ab15383aef93b95378dea9"
+  dependencies:
+    colors "^1.1.2"
+    enhanced-resolve "3.3.0"
+    loader-utils "^1.1.0"
+    lodash "^4.17.4"
+    micromatch "^3.0.3"
+    mkdirp "^0.5.1"
+    object-assign "^4.1.1"
+    source-map-support "^0.4.15"
 
 axios@*:
   version "0.18.0"
@@ -1001,10 +910,6 @@ chownr@^1.0.1:
   version "1.0.1"
   resolved "http://r.npm.sankuai.com/chownr/download/chownr-1.0.1.tgz#e2a75042a9551908bebd25b8523d5f9769d79181"
 
-chrome-trace-event@^0.1.1:
-  version "0.1.3"
-  resolved "http://r.npm.sankuai.com/chrome-trace-event/download/chrome-trace-event-0.1.3.tgz#d395af2d31c87b90a716c831fe326f69768ec084"
-
 cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   version "1.0.4"
   resolved "http://r.npm.sankuai.com/cipher-base/download/cipher-base-1.0.4.tgz#8760e4ecc272f4c363532f926d874aae2c1397de"
@@ -1138,6 +1043,10 @@ colormin@^1.0.5:
     color "^0.11.0"
     css-color-names "0.0.4"
     has "^1.0.1"
+
+colors@^1.1.2:
+  version "1.2.5"
+  resolved "http://r.npm.sankuai.com/colors/download/colors-1.2.5.tgz#89c7ad9a374bc030df8013241f68136ed8835afc"
 
 colors@~1.1.2:
   version "1.1.2"
@@ -1503,6 +1412,12 @@ cyclist@~0.2.2:
   version "0.2.2"
   resolved "http://r.npm.sankuai.com/cyclist/download/cyclist-0.2.2.tgz#1b33792e11e914a2fd6d6ed6447464444e5fa640"
 
+d@1:
+  version "1.0.0"
+  resolved "http://r.npm.sankuai.com/d/download/d-1.0.0.tgz#754bb5bfe55451da69a58b94d45f4c5b0462d58f"
+  dependencies:
+    es5-ext "^0.10.9"
+
 date-fns@^1.23.0:
   version "1.29.0"
   resolved "http://r.npm.sankuai.com/date-fns/download/date-fns-1.29.0.tgz#12e609cdcb935127311d04d33334e2960a2a54e6"
@@ -1544,10 +1459,6 @@ deep-metrics@^0.0.1:
   resolved "http://r.npm.sankuai.com/deep-metrics/download/deep-metrics-0.0.1.tgz#8ac3333195cc5eca059b224eb1ca61fc4cda50fd"
   dependencies:
     semver "^5.3.0"
-
-deepmerge@^2.0.1:
-  version "2.1.0"
-  resolved "http://r.npm.sankuai.com/deepmerge/download/deepmerge-2.1.0.tgz#511a54fff405fc346f0240bb270a3e9533a31102"
 
 define-properties@^1.1.2:
   version "1.1.2"
@@ -1763,6 +1674,24 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
+enhanced-resolve@3.3.0:
+  version "3.3.0"
+  resolved "http://r.npm.sankuai.com/enhanced-resolve/download/enhanced-resolve-3.3.0.tgz#950964ecc7f0332a42321b673b38dc8ff15535b3"
+  dependencies:
+    graceful-fs "^4.1.2"
+    memory-fs "^0.4.0"
+    object-assign "^4.0.1"
+    tapable "^0.2.5"
+
+enhanced-resolve@^3.4.0:
+  version "3.4.1"
+  resolved "http://r.npm.sankuai.com/enhanced-resolve/download/enhanced-resolve-3.4.1.tgz#0421e339fd71419b3da13d129b3979040230476e"
+  dependencies:
+    graceful-fs "^4.1.2"
+    memory-fs "^0.4.0"
+    object-assign "^4.0.1"
+    tapable "^0.2.7"
+
 enhanced-resolve@^4.0.0:
   version "4.0.0"
   resolved "http://r.npm.sankuai.com/enhanced-resolve/download/enhanced-resolve-4.0.0.tgz#e34a6eaa790f62fccd71d93959f56b2b432db10a"
@@ -1809,6 +1738,59 @@ es-to-primitive@^1.1.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.1"
 
+es5-ext@^0.10.14, es5-ext@^0.10.35, es5-ext@^0.10.9, es5-ext@~0.10.14:
+  version "0.10.42"
+  resolved "http://r.npm.sankuai.com/es5-ext/download/es5-ext-0.10.42.tgz#8c07dd33af04d5dcd1310b5cef13bea63a89ba8d"
+  dependencies:
+    es6-iterator "~2.0.3"
+    es6-symbol "~3.1.1"
+    next-tick "1"
+
+es6-iterator@^2.0.1, es6-iterator@~2.0.1, es6-iterator@~2.0.3:
+  version "2.0.3"
+  resolved "http://r.npm.sankuai.com/es6-iterator/download/es6-iterator-2.0.3.tgz#a7de889141a05a94b0854403b2d0a0fbfa98f3b7"
+  dependencies:
+    d "1"
+    es5-ext "^0.10.35"
+    es6-symbol "^3.1.1"
+
+es6-map@^0.1.3:
+  version "0.1.5"
+  resolved "http://r.npm.sankuai.com/es6-map/download/es6-map-0.1.5.tgz#9136e0503dcc06a301690f0bb14ff4e364e949f0"
+  dependencies:
+    d "1"
+    es5-ext "~0.10.14"
+    es6-iterator "~2.0.1"
+    es6-set "~0.1.5"
+    es6-symbol "~3.1.1"
+    event-emitter "~0.3.5"
+
+es6-set@~0.1.5:
+  version "0.1.5"
+  resolved "http://r.npm.sankuai.com/es6-set/download/es6-set-0.1.5.tgz#d2b3ec5d4d800ced818db538d28974db0a73ccb1"
+  dependencies:
+    d "1"
+    es5-ext "~0.10.14"
+    es6-iterator "~2.0.1"
+    es6-symbol "3.1.1"
+    event-emitter "~0.3.5"
+
+es6-symbol@3.1.1, es6-symbol@^3.1.1, es6-symbol@~3.1.1:
+  version "3.1.1"
+  resolved "http://r.npm.sankuai.com/es6-symbol/download/es6-symbol-3.1.1.tgz#bf00ef4fdab6ba1b46ecb7b629b4c7ed5715cc77"
+  dependencies:
+    d "1"
+    es5-ext "~0.10.14"
+
+es6-weak-map@^2.0.1:
+  version "2.0.2"
+  resolved "http://r.npm.sankuai.com/es6-weak-map/download/es6-weak-map-2.0.2.tgz#5e3ab32251ffd1538a1f8e5ffa1357772f92d96f"
+  dependencies:
+    d "1"
+    es5-ext "^0.10.14"
+    es6-iterator "^2.0.1"
+    es6-symbol "^3.1.1"
+
 escape-html@~1.0.1, escape-html@~1.0.3:
   version "1.0.3"
   resolved "http://r.npm.sankuai.com/escape-html/download/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
@@ -1821,19 +1803,21 @@ escape-string-regexp@^1.0.0, escape-string-regexp@^1.0.2, escape-string-regexp@^
   version "1.0.5"
   resolved "http://r.npm.sankuai.com/escape-string-regexp/download/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
+escope@^3.6.0:
+  version "3.6.0"
+  resolved "http://r.npm.sankuai.com/escope/download/escope-3.6.0.tgz#e01975e812781a163a6dadfdd80398dc64c889c3"
+  dependencies:
+    es6-map "^0.1.3"
+    es6-weak-map "^2.0.1"
+    esrecurse "^4.1.0"
+    estraverse "^4.1.1"
+
 eslint-plugin-prettier@^2.2.0:
   version "2.6.0"
   resolved "http://r.npm.sankuai.com/eslint-plugin-prettier/download/eslint-plugin-prettier-2.6.0.tgz#33e4e228bdb06142d03c560ce04ec23f6c767dd7"
   dependencies:
     fast-diff "^1.1.1"
     jest-docblock "^21.0.0"
-
-eslint-scope@^3.7.1:
-  version "3.7.1"
-  resolved "http://r.npm.sankuai.com/eslint-scope/download/eslint-scope-3.7.1.tgz#3d63c3edfda02e06e01a452ad88caacc7cdcb6e8"
-  dependencies:
-    esrecurse "^4.1.0"
-    estraverse "^4.1.1"
 
 esprima@^2.6.0:
   version "2.7.3"
@@ -1860,6 +1844,13 @@ esutils@^2.0.2:
 etag@~1.8.1:
   version "1.8.1"
   resolved "http://r.npm.sankuai.com/etag/download/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
+
+event-emitter@~0.3.5:
+  version "0.3.5"
+  resolved "http://r.npm.sankuai.com/event-emitter/download/event-emitter-0.3.5.tgz#df8c69eef1647923c7157b9ce83840610b02cc39"
+  dependencies:
+    d "1"
+    es5-ext "~0.10.14"
 
 event-stream@~3.3.0:
   version "3.3.4"
@@ -1901,6 +1892,18 @@ evp_bytestokey@^1.0.0, evp_bytestokey@^1.0.3:
   dependencies:
     md5.js "^1.3.4"
     safe-buffer "^5.1.1"
+
+execa@^0.7.0:
+  version "0.7.0"
+  resolved "http://r.npm.sankuai.com/execa/download/execa-0.7.0.tgz#944becd34cc41ee32a63a9faf27ad5a65fc59777"
+  dependencies:
+    cross-spawn "^5.0.1"
+    get-stream "^3.0.0"
+    is-stream "^1.1.0"
+    npm-run-path "^2.0.0"
+    p-finally "^1.0.0"
+    signal-exit "^3.0.0"
+    strip-eof "^1.0.0"
 
 expand-brackets@^0.1.4:
   version "0.1.5"
@@ -2102,7 +2105,7 @@ find-up@^1.0.0:
     path-exists "^2.0.0"
     pinkie-promise "^2.0.0"
 
-find-up@^2.1.0:
+find-up@^2.0.0, find-up@^2.1.0:
   version "2.1.0"
   resolved "http://r.npm.sankuai.com/find-up/download/find-up-2.1.0.tgz#45d1b7e506c717ddd482775a2b77920a3c0c57a7"
   dependencies:
@@ -2229,6 +2232,10 @@ get-stdin@^4.0.1:
   version "4.0.1"
   resolved "http://r.npm.sankuai.com/get-stdin/download/get-stdin-4.0.1.tgz#b968c6b0a04384324902e8bf1a5df32579a450fe"
 
+get-stream@^3.0.0:
+  version "3.0.0"
+  resolved "http://r.npm.sankuai.com/get-stream/download/get-stream-3.0.0.tgz#8e943d1358dc37555054ecbe2edb05aa174ede14"
+
 get-value@^2.0.3, get-value@^2.0.6:
   version "2.0.6"
   resolved "http://r.npm.sankuai.com/get-value/download/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
@@ -2307,6 +2314,10 @@ has-ansi@^2.0.0:
 has-flag@^1.0.0:
   version "1.0.0"
   resolved "http://r.npm.sankuai.com/has-flag/download/has-flag-1.0.0.tgz#9d9e793165ce017a00f00418c43f942a7b1d11fa"
+
+has-flag@^2.0.0:
+  version "2.0.0"
+  resolved "http://r.npm.sankuai.com/has-flag/download/has-flag-2.0.0.tgz#e8207af1cc7b30d446cc70b734b5e8be18f88d51"
 
 has-flag@^3.0.0:
   version "3.0.0"
@@ -2746,6 +2757,10 @@ is-fullwidth-code-point@^1.0.0:
   dependencies:
     number-is-nan "^1.0.0"
 
+is-fullwidth-code-point@^2.0.0:
+  version "2.0.0"
+  resolved "http://r.npm.sankuai.com/is-fullwidth-code-point/download/is-fullwidth-code-point-2.0.0.tgz#a3b30a5c4f199183167aaab93beefae3ddfb654f"
+
 is-generator-function@^1.0.3:
   version "1.0.7"
   resolved "http://r.npm.sankuai.com/is-generator-function/download/is-generator-function-1.0.7.tgz#d2132e529bb0000a7f80794d4bdf5cd5e5813522"
@@ -2834,7 +2849,7 @@ is-regex@^1.0.4:
   dependencies:
     has "^1.0.1"
 
-is-stream@^1.0.1:
+is-stream@^1.0.1, is-stream@^1.1.0:
   version "1.1.0"
   resolved "http://r.npm.sankuai.com/is-stream/download/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
 
@@ -2927,6 +2942,10 @@ jsesc@~0.5.0:
   version "0.5.0"
   resolved "http://r.npm.sankuai.com/jsesc/download/jsesc-0.5.0.tgz#e7dee66e35d6fc16f710fe91d5cf69f70f08911d"
 
+json-loader@^0.5.4:
+  version "0.5.7"
+  resolved "http://r.npm.sankuai.com/json-loader/download/json-loader-0.5.7.tgz#dca14a70235ff82f0ac9a3abeb60d337a365185d"
+
 json-parse-better-errors@^1.0.1:
   version "1.0.2"
   resolved "http://r.npm.sankuai.com/json-parse-better-errors/download/json-parse-better-errors-1.0.2.tgz#bb867cfb3450e69107c131d1c514bab3dc8bcaa9"
@@ -2947,7 +2966,7 @@ json5@0.4.0:
   version "0.4.0"
   resolved "http://r.npm.sankuai.com/json5/download/json5-0.4.0.tgz#054352e4c4c80c86c0923877d449de176a732c8d"
 
-json5@^0.5.0:
+json5@^0.5.0, json5@^0.5.1:
   version "0.5.1"
   resolved "http://r.npm.sankuai.com/json5/download/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
 
@@ -3088,12 +3107,12 @@ koa@^2.2.0:
     type-is "^1.5.5"
     vary "^1.0.0"
 
-last-call-webpack-plugin@^3.0.0:
-  version "3.0.0"
-  resolved "http://r.npm.sankuai.com/last-call-webpack-plugin/download/last-call-webpack-plugin-3.0.0.tgz#9742df0e10e3cf46e5c0381c2de90d3a7a2d7555"
+last-call-webpack-plugin@^2.1.2:
+  version "2.1.2"
+  resolved "http://r.npm.sankuai.com/last-call-webpack-plugin/download/last-call-webpack-plugin-2.1.2.tgz#ad80c6e310998294d2ed2180a68e9589e4768c44"
   dependencies:
-    lodash "^4.17.5"
-    webpack-sources "^1.1.0"
+    lodash "^4.17.4"
+    webpack-sources "^1.0.1"
 
 lazy-cache@^1.0.3:
   version "1.0.4"
@@ -3109,10 +3128,6 @@ lcid@^1.0.0:
   dependencies:
     invert-kv "^1.0.0"
 
-leb@^0.3.0:
-  version "0.3.0"
-  resolved "http://r.npm.sankuai.com/leb/download/leb-0.3.0.tgz#32bee9fad168328d6aea8522d833f4180eed1da3"
-
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "http://r.npm.sankuai.com/load-json-file/download/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
@@ -3122,6 +3137,15 @@ load-json-file@^1.0.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
     strip-bom "^2.0.0"
+
+load-json-file@^2.0.0:
+  version "2.0.0"
+  resolved "http://r.npm.sankuai.com/load-json-file/download/load-json-file-2.0.0.tgz#7947e42149af80d696cbf797bcaabcfe1fe29ca8"
+  dependencies:
+    graceful-fs "^4.1.2"
+    parse-json "^2.2.0"
+    pify "^2.0.0"
+    strip-bom "^3.0.0"
 
 load-json-file@^4.0.0:
   version "4.0.0"
@@ -3291,17 +3315,13 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "http://r.npm.sankuai.com/lodash.uniq/download/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@^4.14.0, lodash@^4.16.6, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.5, lodash@^4.5.1:
+lodash@^4.14.0, lodash@^4.16.6, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.5.1:
   version "4.17.10"
   resolved "http://r.npm.sankuai.com/lodash/download/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
 
 loglevel@^1.4.1:
   version "1.6.1"
   resolved "http://r.npm.sankuai.com/loglevel/download/loglevel-1.6.1.tgz#e0fc95133b6ef276cdc8887cdaf24aa6f156f8fa"
-
-long@^3.2.0:
-  version "3.2.0"
-  resolved "http://r.npm.sankuai.com/long/download/long-3.2.0.tgz#d821b7138ca1cb581c172990ef14db200b5c474b"
 
 longest@^1.0.1:
   version "1.0.1"
@@ -3378,6 +3398,12 @@ media-typer@0.3.0:
   version "0.3.0"
   resolved "http://r.npm.sankuai.com/media-typer/download/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
 
+mem@^1.1.0:
+  version "1.1.0"
+  resolved "http://r.npm.sankuai.com/mem/download/mem-1.1.0.tgz#5edd52b485ca1d900fe64895505399a0dfa45f76"
+  dependencies:
+    mimic-fn "^1.0.0"
+
 memory-fs@^0.4.0, memory-fs@~0.4.1:
   version "0.4.1"
   resolved "http://r.npm.sankuai.com/memory-fs/download/memory-fs-0.4.1.tgz#3a9a20b8462523e447cfbc7e8bb80ed667bfc552"
@@ -3430,7 +3456,7 @@ micromatch@^2.3.11:
     parse-glob "^3.0.4"
     regex-cache "^0.4.2"
 
-micromatch@^3.1.4, micromatch@^3.1.8:
+micromatch@^3.0.3, micromatch@^3.1.4:
   version "3.1.10"
   resolved "http://r.npm.sankuai.com/micromatch/download/micromatch-3.1.10.tgz#70859bc95c9840952f359a068a3fc49f9ecfac23"
   dependencies:
@@ -3472,6 +3498,10 @@ mime@1.4.1:
 mime@^1.4.1, mime@^1.5.0:
   version "1.6.0"
   resolved "http://r.npm.sankuai.com/mime/download/mime-1.6.0.tgz#32cd9e5c64553bd58d19a568af452acff04981b1"
+
+mimic-fn@^1.0.0:
+  version "1.2.0"
+  resolved "http://r.npm.sankuai.com/mimic-fn/download/mimic-fn-1.2.0.tgz#820c86a39334640e99516928bd03fca88057d022"
 
 minimalistic-assert@^1.0.0:
   version "1.0.1"
@@ -3635,6 +3665,10 @@ neo-async@^2.5.0:
   version "2.5.1"
   resolved "http://r.npm.sankuai.com/neo-async/download/neo-async-2.5.1.tgz#acb909e327b1e87ec9ef15f41b8a269512ad41ee"
 
+next-tick@1:
+  version "1.0.0"
+  resolved "http://r.npm.sankuai.com/next-tick/download/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
+
 nice-try@^1.0.4:
   version "1.0.4"
   resolved "http://r.npm.sankuai.com/nice-try/download/nice-try-1.0.4.tgz#d93962f6c52f2c1558c0fbda6d512819f1efe1c4"
@@ -3763,6 +3797,12 @@ npm-run-all@^4.1.2:
     shell-quote "^1.6.1"
     string.prototype.padend "^3.0.0"
 
+npm-run-path@^2.0.0:
+  version "2.0.2"
+  resolved "http://r.npm.sankuai.com/npm-run-path/download/npm-run-path-2.0.2.tgz#35a9232dfa35d7067b4cb2ddf2357b1871536c5f"
+  dependencies:
+    path-key "^2.0.0"
+
 npmlog@^4.0.2:
   version "4.1.2"
   resolved "http://r.npm.sankuai.com/npmlog/download/npmlog-4.1.2.tgz#08a7f2a8bf734604779a9efa4ad5cc717abb954b"
@@ -3866,12 +3906,12 @@ opn@^5.1.0:
   dependencies:
     is-wsl "^1.1.0"
 
-optimize-css-assets-webpack-plugin@^4.0.1:
-  version "4.0.1"
-  resolved "http://r.npm.sankuai.com/optimize-css-assets-webpack-plugin/download/optimize-css-assets-webpack-plugin-4.0.1.tgz#48f016766752c7648b92cc1e795b999732bd87a2"
+optimize-css-assets-webpack-plugin@3.2.0:
+  version "3.2.0"
+  resolved "http://r.npm.sankuai.com/optimize-css-assets-webpack-plugin/download/optimize-css-assets-webpack-plugin-3.2.0.tgz#09a40c4cefde1dd0142444a873c56aa29eb18e6f"
   dependencies:
     cssnano "^3.4.0"
-    last-call-webpack-plugin "^3.0.0"
+    last-call-webpack-plugin "^2.1.2"
 
 original@>=0.0.5:
   version "1.0.1"
@@ -3893,6 +3933,14 @@ os-locale@^1.4.0:
   dependencies:
     lcid "^1.0.0"
 
+os-locale@^2.0.0:
+  version "2.1.0"
+  resolved "http://r.npm.sankuai.com/os-locale/download/os-locale-2.1.0.tgz#42bc2900a6b5b8bd17376c8e882b65afccf24bf2"
+  dependencies:
+    execa "^0.7.0"
+    lcid "^1.0.0"
+    mem "^1.1.0"
+
 os-shim@^0.1.2:
   version "0.1.3"
   resolved "http://r.npm.sankuai.com/os-shim/download/os-shim-0.1.3.tgz#6b62c3791cf7909ea35ed46e17658bb417cb3917"
@@ -3907,6 +3955,10 @@ osenv@^0.1.4:
   dependencies:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.0"
+
+p-finally@^1.0.0:
+  version "1.0.0"
+  resolved "http://r.npm.sankuai.com/p-finally/download/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
 
 p-limit@^1.1.0:
   version "1.2.0"
@@ -4012,7 +4064,7 @@ path-is-inside@^1.0.1:
   version "1.0.2"
   resolved "http://r.npm.sankuai.com/path-is-inside/download/path-is-inside-1.0.2.tgz#365417dede44430d1c11af61027facf074bdfc53"
 
-path-key@^2.0.1:
+path-key@^2.0.0, path-key@^2.0.1:
   version "2.0.1"
   resolved "http://r.npm.sankuai.com/path-key/download/path-key-2.0.1.tgz#411cadb574c5a140d3a4b1910d40d80cc9f40b40"
 
@@ -4037,6 +4089,12 @@ path-type@^1.0.0:
     graceful-fs "^4.1.2"
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
+
+path-type@^2.0.0:
+  version "2.0.0"
+  resolved "http://r.npm.sankuai.com/path-type/download/path-type-2.0.0.tgz#f012ccb8415b7096fc2daa1054c3d72389594c73"
+  dependencies:
+    pify "^2.0.0"
 
 path-type@^3.0.0:
   version "3.0.0"
@@ -4984,6 +5042,13 @@ read-pkg-up@^1.0.1:
     find-up "^1.0.0"
     read-pkg "^1.0.0"
 
+read-pkg-up@^2.0.0:
+  version "2.0.0"
+  resolved "http://r.npm.sankuai.com/read-pkg-up/download/read-pkg-up-2.0.0.tgz#6b72a8048984e0c41e79510fd5e9fa99b3b549be"
+  dependencies:
+    find-up "^2.0.0"
+    read-pkg "^2.0.0"
+
 read-pkg@^1.0.0:
   version "1.1.0"
   resolved "http://r.npm.sankuai.com/read-pkg/download/read-pkg-1.1.0.tgz#f5ffaa5ecd29cb31c0474bca7d756b6bb29e3f28"
@@ -4991,6 +5056,14 @@ read-pkg@^1.0.0:
     load-json-file "^1.0.0"
     normalize-package-data "^2.3.2"
     path-type "^1.0.0"
+
+read-pkg@^2.0.0:
+  version "2.0.0"
+  resolved "http://r.npm.sankuai.com/read-pkg/download/read-pkg-2.0.0.tgz#8ef1c0623c6a6db0dc6713c4bfac46332b2368f8"
+  dependencies:
+    load-json-file "^2.0.0"
+    normalize-package-data "^2.3.2"
+    path-type "^2.0.0"
 
 read-pkg@^3.0.0:
   version "3.0.0"
@@ -5271,7 +5344,7 @@ schema-utils@^0.3.0:
   dependencies:
     ajv "^5.0.0"
 
-schema-utils@^0.4.0, schema-utils@^0.4.4, schema-utils@^0.4.5:
+schema-utils@^0.4.0, schema-utils@^0.4.5:
   version "0.4.5"
   resolved "http://r.npm.sankuai.com/schema-utils/download/schema-utils-0.4.5.tgz#21836f0608aac17b78f9e3e24daff14a5ca13a3e"
   dependencies:
@@ -5486,6 +5559,12 @@ source-map-resolve@^0.5.0, source-map-resolve@^0.5.1:
     source-map-url "^0.4.0"
     urix "^0.1.0"
 
+source-map-support@^0.4.15:
+  version "0.4.18"
+  resolved "http://r.npm.sankuai.com/source-map-support/download/source-map-support-0.4.18.tgz#0286a6de8be42641338594e97ccea75f0a2c585f"
+  dependencies:
+    source-map "^0.5.6"
+
 source-map-support@^0.5:
   version "0.5.6"
   resolved "http://r.npm.sankuai.com/source-map-support/download/source-map-support-0.5.6.tgz#4435cee46b1aab62b8e8610ce60f788091c51c13"
@@ -5658,6 +5737,13 @@ string-width@^1.0.1, string-width@^1.0.2:
     is-fullwidth-code-point "^1.0.0"
     strip-ansi "^3.0.0"
 
+string-width@^2.0.0:
+  version "2.1.1"
+  resolved "http://r.npm.sankuai.com/string-width/download/string-width-2.1.1.tgz#ab93f27a8dc13d28cac815c462143a6d9012ae9e"
+  dependencies:
+    is-fullwidth-code-point "^2.0.0"
+    strip-ansi "^4.0.0"
+
 string.prototype.padend@^3.0.0:
   version "3.0.0"
   resolved "http://r.npm.sankuai.com/string.prototype.padend/download/string.prototype.padend-3.0.0.tgz#f3aaef7c1719f170c5eab1c32bf780d96e21f2f0"
@@ -5688,6 +5774,12 @@ strip-ansi@^3.0.0, strip-ansi@^3.0.1:
   dependencies:
     ansi-regex "^2.0.0"
 
+strip-ansi@^4.0.0:
+  version "4.0.0"
+  resolved "http://r.npm.sankuai.com/strip-ansi/download/strip-ansi-4.0.0.tgz#a8479022eb1ac368a871389b635262c505ee368f"
+  dependencies:
+    ansi-regex "^3.0.0"
+
 strip-bom@^2.0.0:
   version "2.0.0"
   resolved "http://r.npm.sankuai.com/strip-bom/download/strip-bom-2.0.0.tgz#6219a85616520491f35788bdbf1447a99c7e6b0e"
@@ -5698,13 +5790,17 @@ strip-bom@^3.0.0:
   version "3.0.0"
   resolved "http://r.npm.sankuai.com/strip-bom/download/strip-bom-3.0.0.tgz#2334c18e9c759f7bdd56fdef7e9ae3d588e68ed3"
 
+strip-eof@^1.0.0:
+  version "1.0.0"
+  resolved "http://r.npm.sankuai.com/strip-eof/download/strip-eof-1.0.0.tgz#bb43ff5598a6eb05d89b59fcd129c983313606bf"
+
 strip-indent@^1.0.1:
   version "1.0.1"
   resolved "http://r.npm.sankuai.com/strip-indent/download/strip-indent-1.0.1.tgz#0c7962a6adefa7bbd4ac366460a638552ae1a0a2"
   dependencies:
     get-stdin "^4.0.1"
 
-strip-json-comments@^2.0.1, strip-json-comments@~2.0.1:
+strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "http://r.npm.sankuai.com/strip-json-comments/download/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
@@ -5729,6 +5825,12 @@ supports-color@^3.2.3:
   dependencies:
     has-flag "^1.0.0"
 
+supports-color@^4.2.1:
+  version "4.5.0"
+  resolved "http://r.npm.sankuai.com/supports-color/download/supports-color-4.5.0.tgz#be7a0de484dec5c5cddf8b3d59125044912f635b"
+  dependencies:
+    has-flag "^2.0.0"
+
 supports-color@^5.1.0, supports-color@^5.3.0, supports-color@^5.4.0:
   version "5.4.0"
   resolved "http://r.npm.sankuai.com/supports-color/download/supports-color-5.4.0.tgz#1c6b337402c2137605efe19f10fec390f6faab54"
@@ -5746,6 +5848,10 @@ svgo@^0.7.0:
     mkdirp "~0.5.1"
     sax "~1.2.1"
     whet.extend "~0.9.9"
+
+tapable@^0.2.5, tapable@^0.2.7:
+  version "0.2.8"
+  resolved "http://r.npm.sankuai.com/tapable/download/tapable-0.2.8.tgz#99372a5c999bf2df160afc0d74bed4f47948cd22"
 
 tapable@^1.0.0:
   version "1.0.0"
@@ -5852,22 +5958,6 @@ ts-loader@^4.3.0:
     micromatch "^3.1.4"
     semver "^5.0.1"
 
-tsconfig-paths-webpack-plugin@^3.1.3:
-  version "3.1.3"
-  resolved "http://r.npm.sankuai.com/tsconfig-paths-webpack-plugin/download/tsconfig-paths-webpack-plugin-3.1.3.tgz#1b5e146f0106817cda34f3b1a25365c0bcf8a9c2"
-  dependencies:
-    chalk "^2.3.0"
-    tsconfig-paths "^3.2.0"
-
-tsconfig-paths@^3.2.0:
-  version "3.3.2"
-  resolved "http://r.npm.sankuai.com/tsconfig-paths/download/tsconfig-paths-3.3.2.tgz#bb48b845e221a44387be0f9968ee6c37c2a37c4d"
-  dependencies:
-    deepmerge "^2.0.1"
-    minimist "^1.2.0"
-    strip-bom "^3.0.0"
-    strip-json-comments "^2.0.1"
-
 tslib@^1.7.1, tslib@^1.8.0, tslib@^1.8.1:
   version "1.9.1"
   resolved "http://r.npm.sankuai.com/tslib/download/tslib-1.9.1.tgz#a5d1f0532a49221c87755cfcc89ca37197242ba7"
@@ -5963,7 +6053,7 @@ uglify-js@3.3.x:
     commander "~2.15.0"
     source-map "~0.6.1"
 
-uglify-js@^2.8.27:
+uglify-js@^2.8.27, uglify-js@^2.8.29:
   version "2.8.29"
   resolved "http://r.npm.sankuai.com/uglify-js/download/uglify-js-2.8.29.tgz#29c5733148057bb4e1f75df35b7a9cb72e6a59dd"
   dependencies:
@@ -5976,7 +6066,15 @@ uglify-to-browserify@~1.0.0:
   version "1.0.2"
   resolved "http://r.npm.sankuai.com/uglify-to-browserify/download/uglify-to-browserify-1.0.2.tgz#6e0924d6bda6b5afe349e39a6d632850a0f882b7"
 
-uglifyjs-webpack-plugin@^1.2.4, uglifyjs-webpack-plugin@^1.2.5:
+uglifyjs-webpack-plugin@^0.4.6:
+  version "0.4.6"
+  resolved "http://r.npm.sankuai.com/uglifyjs-webpack-plugin/download/uglifyjs-webpack-plugin-0.4.6.tgz#b951f4abb6bd617e66f63eb891498e391763e309"
+  dependencies:
+    source-map "^0.5.6"
+    uglify-js "^2.8.29"
+    webpack-sources "^1.0.1"
+
+uglifyjs-webpack-plugin@^1.2.5:
   version "1.2.5"
   resolved "http://r.npm.sankuai.com/uglifyjs-webpack-plugin/download/uglifyjs-webpack-plugin-1.2.5.tgz#2ef8387c8f1a903ec5e44fa36f9f3cbdcea67641"
   dependencies:
@@ -6168,7 +6266,7 @@ warning@^3.0.0:
   dependencies:
     loose-envify "^1.0.0"
 
-watchpack@^1.5.0:
+watchpack@^1.4.0:
   version "1.6.0"
   resolved "http://r.npm.sankuai.com/watchpack/download/watchpack-1.6.0.tgz#4bc12c2ebe8aa277a71f1d3f14d685c7b446cd00"
   dependencies:
@@ -6181,16 +6279,6 @@ wbuf@^1.1.0, wbuf@^1.7.2:
   resolved "http://r.npm.sankuai.com/wbuf/download/wbuf-1.7.3.tgz#c1d8d149316d3ea852848895cb6a0bfe887b87df"
   dependencies:
     minimalistic-assert "^1.0.0"
-
-webassemblyjs@1.4.3:
-  version "1.4.3"
-  resolved "http://r.npm.sankuai.com/webassemblyjs/download/webassemblyjs-1.4.3.tgz#0591893efb8fbde74498251cbe4b2d83df9239cb"
-  dependencies:
-    "@webassemblyjs/ast" "1.4.3"
-    "@webassemblyjs/validation" "1.4.3"
-    "@webassemblyjs/wasm-parser" "1.4.3"
-    "@webassemblyjs/wast-parser" "1.4.3"
-    long "^3.2.0"
 
 webp-converter@^2.1.6:
   version "2.1.6"
@@ -6251,32 +6339,32 @@ webpack-sources@^1.0.1, webpack-sources@^1.1.0:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@^4.8.3:
-  version "4.8.3"
-  resolved "http://r.npm.sankuai.com/webpack/download/webpack-4.8.3.tgz#957c8e80000f9e5cc03d775e78b472d8954f4eeb"
+webpack@3.10.0:
+  version "3.10.0"
+  resolved "http://r.npm.sankuai.com/webpack/download/webpack-3.10.0.tgz#5291b875078cf2abf42bdd23afe3f8f96c17d725"
   dependencies:
-    "@webassemblyjs/ast" "1.4.3"
-    "@webassemblyjs/wasm-edit" "1.4.3"
-    "@webassemblyjs/wasm-parser" "1.4.3"
     acorn "^5.0.0"
-    acorn-dynamic-import "^3.0.0"
-    ajv "^6.1.0"
-    ajv-keywords "^3.1.0"
-    chrome-trace-event "^0.1.1"
-    enhanced-resolve "^4.0.0"
-    eslint-scope "^3.7.1"
+    acorn-dynamic-import "^2.0.0"
+    ajv "^5.1.5"
+    ajv-keywords "^2.0.0"
+    async "^2.1.2"
+    enhanced-resolve "^3.4.0"
+    escope "^3.6.0"
+    interpret "^1.0.0"
+    json-loader "^0.5.4"
+    json5 "^0.5.1"
     loader-runner "^2.3.0"
     loader-utils "^1.1.0"
     memory-fs "~0.4.1"
-    micromatch "^3.1.8"
     mkdirp "~0.5.0"
-    neo-async "^2.5.0"
     node-libs-browser "^2.0.0"
-    schema-utils "^0.4.4"
-    tapable "^1.0.0"
-    uglifyjs-webpack-plugin "^1.2.4"
-    watchpack "^1.5.0"
+    source-map "^0.5.3"
+    supports-color "^4.2.1"
+    tapable "^0.2.7"
+    uglifyjs-webpack-plugin "^0.4.6"
+    watchpack "^1.4.0"
     webpack-sources "^1.0.1"
+    yargs "^8.0.2"
 
 websocket-driver@>=0.5.1:
   version "0.7.0"
@@ -6300,6 +6388,10 @@ whet.extend@~0.9.9:
 which-module@^1.0.0:
   version "1.0.0"
   resolved "http://r.npm.sankuai.com/which-module/download/which-module-1.0.0.tgz#bba63ca861948994ff307736089e3b96026c2a4f"
+
+which-module@^2.0.0:
+  version "2.0.0"
+  resolved "http://r.npm.sankuai.com/which-module/download/which-module-2.0.0.tgz#d9ef07dce77b9902b8a3a8fa4b31c3e3f7e6e87a"
 
 which@1.2.x:
   version "1.2.14"
@@ -6377,6 +6469,12 @@ yargs-parser@^4.2.0:
   dependencies:
     camelcase "^3.0.0"
 
+yargs-parser@^7.0.0:
+  version "7.0.0"
+  resolved "http://r.npm.sankuai.com/yargs-parser/download/yargs-parser-7.0.0.tgz#8d0ac42f16ea55debd332caf4c4038b3e3f5dfd9"
+  dependencies:
+    camelcase "^4.1.0"
+
 yargs@6.6.0:
   version "6.6.0"
   resolved "http://r.npm.sankuai.com/yargs/download/yargs-6.6.0.tgz#782ec21ef403345f830a808ca3d513af56065208"
@@ -6394,6 +6492,24 @@ yargs@6.6.0:
     which-module "^1.0.0"
     y18n "^3.2.1"
     yargs-parser "^4.2.0"
+
+yargs@^8.0.2:
+  version "8.0.2"
+  resolved "http://r.npm.sankuai.com/yargs/download/yargs-8.0.2.tgz#6299a9055b1cefc969ff7e79c1d918dceb22c360"
+  dependencies:
+    camelcase "^4.1.0"
+    cliui "^3.2.0"
+    decamelize "^1.1.1"
+    get-caller-file "^1.0.1"
+    os-locale "^2.0.0"
+    read-pkg-up "^2.0.0"
+    require-directory "^2.1.1"
+    require-main-filename "^1.0.1"
+    set-blocking "^2.0.0"
+    string-width "^2.0.0"
+    which-module "^2.0.0"
+    y18n "^3.2.1"
+    yargs-parser "^7.0.0"
 
 yargs@~3.10.0:
   version "3.10.0"

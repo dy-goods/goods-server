@@ -41,9 +41,7 @@ async function buildClientCode() {
       );
 
       if (stats.hasErrors() || stats.hasWarnings()) {
-        if (stats.hasErrors()) {
-          return reject(new Error('compile faild'));
-        }
+        return reject(new Error('compile faild'));
       }
 
       // 将构建信息写入 buildMeta.json 文件中

@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const config = require('config');
 const path = require('path');
 const root = config.get('root'); // webpack want absolute path
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 const webpackConfig = {
   module: {
@@ -11,17 +10,16 @@ const webpackConfig = {
       {
         test: /\.tsx?$/,
         use: {
-          loader: 'ts-loader',
+          loader: 'awesome-typescript-loader',
+          options: {
+            configFileName: path.resolve(root, './src/client/tsconfig.json'),
+          },
         },
-        exclude: /node_modules/,
+        exclude: [/node_modules/],
       },
       {
         test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader?minimize',
-          'postcss-loader',
-        ],
+        use: ['style-loader', 'css-loader?minimize', 'postcss-loader'],
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -46,13 +44,8 @@ const webpackConfig = {
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.json', 'scss', 'css'],
-    plugins: [
-      new TsconfigPathsPlugin({
-        configFile: path.resolve(root, './src/client/tsconfig.json'),
-      }),
-    ],
-  }
+    extensions: ['.tsx', '.ts', '.js', '.json', '.scss', '.css']
+  },
 };
 
 module.exports = webpackConfig;
