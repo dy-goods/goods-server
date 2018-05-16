@@ -2,8 +2,9 @@ import * as Koa from 'koa';
 import routes from './routes';
 // import middlewares from './middlewares';
 import * as bodyParser from 'koa-bodyparser';
+import graphql from './gql/schema';
 
-import './graphql/models/test';
+import './gql/models/test';
 
 const app = new Koa();
 
@@ -12,5 +13,9 @@ app.use(bodyParser());
 // middlewares(app);
 
 app.use(routes);
+app.use(graphql);
+app.use(ctx => {
+  ctx.body = 'GraphQL Endpoint';
+});
 
 export default app;

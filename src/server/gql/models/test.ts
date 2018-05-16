@@ -16,6 +16,7 @@ export default async function test() {
     price: 800, // 以分为单位
     title: '标题',
     imgUrl: '图片链接',
+    isDeleted: false,
     labels: '好玩到爆，省事的气球车', // 标签, eg好玩到爆，省事的气球车
   });
   console.log('created: ' + JSON.stringify(good, null, 2));

@@ -1,7 +1,7 @@
 import * as Seq from 'sequelize';
 import { Sequelize } from 'sequelize';
 
-export interface Goods {
+export interface IGoods {
   id: string;
   videoUrl: string;
   stars: number; // 点赞数
@@ -12,6 +12,7 @@ export interface Goods {
   title: string;
   imgUrl: string;
   labels: string; // 标签, eg好玩到爆，省事的气球车
+  isDeleted: boolean;
   createdAt: number;
   updatedAt: number;
 }
@@ -33,6 +34,7 @@ export default function(sequelize: Sequelize) {
       title: Seq.STRING(100),
       imgUrl: Seq.STRING(100),
       labels: Seq.STRING(100),
+      isDeleted: Seq.BOOLEAN,
       createdAt: Seq.BIGINT,
       updatedAt: Seq.BIGINT,
     },

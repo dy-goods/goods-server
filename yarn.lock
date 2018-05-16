@@ -106,6 +106,10 @@
   version "1.0.6"
   resolved "http://r.npm.sankuai.com/@types/geojson/download/@types/geojson-1.0.6.tgz#3e02972728c69248c2af08d60a48cbb8680fffdf"
 
+"@types/graphql@0.11.5":
+  version "0.11.5"
+  resolved "http://r.npm.sankuai.com/@types/graphql/download/@types/graphql-0.11.5.tgz#e70f051e80b299be5b12f7e60d962f30c9596072"
+
 "@types/history@*":
   version "4.6.2"
   resolved "http://r.npm.sankuai.com/@types/history/download/@types/history-4.6.2.tgz#12cfaba693ba20f114ed5765467ff25fdf67ddb0"
@@ -274,7 +278,7 @@ abbrev@1:
   version "1.1.1"
   resolved "http://r.npm.sankuai.com/abbrev/download/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
 
-accepts@^1.2.2, accepts@~1.3.4, accepts@~1.3.5:
+accepts@^1.2.2, accepts@^1.3.0, accepts@~1.3.4, accepts@~1.3.5:
   version "1.3.5"
   resolved "http://r.npm.sankuai.com/accepts/download/accepts-1.3.5.tgz#eb777df6011723a3b14e8a72c0805c8e86746bd2"
   dependencies:
@@ -607,7 +611,7 @@ babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
     esutils "^2.0.2"
     js-tokens "^3.0.2"
 
-babel-runtime@^6.23.0:
+babel-runtime@^6.23.0, babel-runtime@^6.25.0:
   version "6.26.0"
   resolved "http://r.npm.sankuai.com/babel-runtime/download/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   dependencies:
@@ -1239,7 +1243,7 @@ content-disposition@0.5.2, content-disposition@~0.5.0:
   version "0.5.2"
   resolved "http://r.npm.sankuai.com/content-disposition/download/content-disposition-0.5.2.tgz#0cf68bb9ddf5f2be7961c3a85178cb85dba78cb4"
 
-content-type@^1.0.0, content-type@~1.0.4:
+content-type@^1.0.0, content-type@^1.0.4, content-type@~1.0.4:
   version "1.0.4"
   resolved "http://r.npm.sankuai.com/content-type/download/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
 
@@ -2049,6 +2053,15 @@ expand-range@^1.8.1:
   dependencies:
     fill-range "^2.1.0"
 
+express-graphql@^0.6.11:
+  version "0.6.12"
+  resolved "http://r.npm.sankuai.com/express-graphql/download/express-graphql-0.6.12.tgz#dfcb2058ca72ed5190b140830ad8cdbf76a9128a"
+  dependencies:
+    accepts "^1.3.0"
+    content-type "^1.0.4"
+    http-errors "^1.3.0"
+    raw-body "^2.3.2"
+
 express@^4.16.2:
   version "4.16.3"
   resolved "http://r.npm.sankuai.com/express/download/express-4.16.3.tgz#6af8a502350db3246ecc4becf6b5a34d22f7ed53"
@@ -2462,6 +2475,12 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   version "4.1.11"
   resolved "http://r.npm.sankuai.com/graceful-fs/download/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
+graphql@0.11.7:
+  version "0.11.7"
+  resolved "http://r.npm.sankuai.com/graphql/download/graphql-0.11.7.tgz#e5abaa9cb7b7cccb84e9f0836bf4370d268750c6"
+  dependencies:
+    iterall "1.1.3"
+
 handle-thing@^1.2.5:
   version "1.2.5"
   resolved "http://r.npm.sankuai.com/handle-thing/download/handle-thing-1.2.5.tgz#fd7aad726bf1a5fd16dfc29b2f7a6601d27139c4"
@@ -2668,7 +2687,7 @@ http-errors@1.6.2:
     setprototypeof "1.0.3"
     statuses ">= 1.3.1 < 2"
 
-http-errors@^1.2.8, http-errors@^1.3.1, http-errors@~1.6.1, http-errors@~1.6.2:
+http-errors@1.6.3, http-errors@^1.2.8, http-errors@^1.3.0, http-errors@^1.3.1, http-errors@^1.6.2, http-errors@~1.6.1, http-errors@~1.6.2:
   version "1.6.3"
   resolved "http://r.npm.sankuai.com/http-errors/download/http-errors-1.6.3.tgz#8b55680bb4be283a0b5bf4ea2e38580be1d9320d"
   dependencies:
@@ -2718,7 +2737,7 @@ iconv-lite@0.4.19:
   version "0.4.19"
   resolved "http://r.npm.sankuai.com/iconv-lite/download/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
 
-iconv-lite@^0.4.4, iconv-lite@~0.4.13:
+iconv-lite@0.4.23, iconv-lite@^0.4.4, iconv-lite@~0.4.13:
   version "0.4.23"
   resolved "http://r.npm.sankuai.com/iconv-lite/download/iconv-lite-0.4.23.tgz#297871f63be507adcfbfca715d0cd0eed84e9a63"
   dependencies:
@@ -3119,6 +3138,10 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "http://r.npm.sankuai.com/isstream/download/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
+iterall@1.1.3:
+  version "1.1.3"
+  resolved "http://r.npm.sankuai.com/iterall/download/iterall-1.1.3.tgz#1cbbff96204056dde6656e2ed2e2226d0e6d72c9"
+
 jest-docblock@^21.0.0:
   version "21.2.0"
   resolved "http://r.npm.sankuai.com/jest-docblock/download/jest-docblock-21.2.0.tgz#51529c3b30d5fd159da60c27ceedc195faf8d414"
@@ -3273,6 +3296,15 @@ koa-convert@^1.2.0:
   dependencies:
     co "^4.6.0"
     koa-compose "^3.0.0"
+
+koa-graphql@^0.7.5:
+  version "0.7.5"
+  resolved "http://r.npm.sankuai.com/koa-graphql/download/koa-graphql-0.7.5.tgz#2ed65b46645f200cce918d5eca6d1bdd8bfc467c"
+  dependencies:
+    babel-runtime "^6.25.0"
+    express-graphql "^0.6.11"
+    http-errors "^1.6.2"
+    thenify "^3.3.0"
 
 koa-is-json@^1.0.0:
   version "1.0.0"
@@ -5240,6 +5272,15 @@ raw-body@2.3.2:
     iconv-lite "0.4.19"
     unpipe "1.0.0"
 
+raw-body@^2.3.2:
+  version "2.3.3"
+  resolved "http://r.npm.sankuai.com/raw-body/download/raw-body-2.3.3.tgz#1b324ece6b5706e153855bc1148c65bb7f6ea0c3"
+  dependencies:
+    bytes "3.0.0"
+    http-errors "1.6.3"
+    iconv-lite "0.4.23"
+    unpipe "1.0.0"
+
 raw-body@~2.1.2:
   version "2.1.7"
   resolved "http://r.npm.sankuai.com/raw-body/download/raw-body-2.1.7.tgz#adfeace2e4fb3098058014d08c072dcc59758774"
@@ -6303,7 +6344,7 @@ thenify-all@^1.0.0:
   dependencies:
     thenify ">= 3.1.0 < 4"
 
-"thenify@>= 3.1.0 < 4":
+"thenify@>= 3.1.0 < 4", thenify@^3.3.0:
   version "3.3.0"
   resolved "http://r.npm.sankuai.com/thenify/download/thenify-3.3.0.tgz#e69e38a1babe969b0108207978b9f62b88604839"
   dependencies:
