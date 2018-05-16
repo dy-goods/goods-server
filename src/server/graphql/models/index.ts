@@ -38,7 +38,7 @@ export default sequelize;
 /*const db = new Seq('myExpress', 'root', '683004', {
   dialect: 'mysql',
   host: '127.0.0.1',
-  port: '3306',
+  port: 3306,
 });*/
 /* 通过URL连接 */
 /*const db = new Seq('mysql://root:683004@localhost:3306/myExpress', {});
