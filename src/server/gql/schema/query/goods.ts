@@ -24,13 +24,13 @@ export const goods: FieldConfig = {
       offset: (pageNo - 1) * pageSize,
       limit: pageSize,
       where: {
-        isDelete: false,
+        isDeleted: false,
       },
     });
     const totalCount: any = await Goods.findAll<number>({
       attributes: [[db.fn('COUNT', db.col('*')), 'totalCount']],
       where: {
-        isDelete: false,
+        isDeleted: false,
       },
     });
     return {
