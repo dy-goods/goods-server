@@ -7,10 +7,15 @@ import {
   GraphQLInputObjectType,
 } from 'graphql';
 import { IGoods } from '../../models/goods';
+import { GraphQLBoolean } from 'graphql/type/scalars';
 
 export const GoodsType = new GraphQLObjectType({
   name: 'Goods',
   fields: (): FieldConfigMap<IGoods> => ({
+    isDeleted: {
+      type: GraphQLBoolean,
+      description: '软删除标记',
+    },
     id: {
       type: new GraphQLNonNull(GraphQLString),
       description: 'ID',
