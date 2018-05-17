@@ -1,0 +1,62 @@
+.loading-wrapper {
+  /*position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;*/
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  pointer-events: none;
+  opacity: 0.75;
+  background: #111111;
+  border-radius: 12px;
+  padding: 64px 77px;
+
+  .icon-loading {
+    display: block;
+    color: #ffffff;
+    font-size: 72px;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    animation: rotate 1s linear infinite;
+    transform-origin: 50% 50%;
+  }
+
+  .hint {
+    margin-top: 34px;
+    text-align: center;
+    font-size: 28px;
+    color: #FFFFFF;
+    &:empty {
+      display: none;
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*
+此类动画的原理
+1. 画出静态原型
+2. 用动画让他们动起来
+3. 设置animation-delay
+*/
