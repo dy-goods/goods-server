@@ -1,7 +1,6 @@
 import db from '../../models';
 import { GraphQLInt } from 'graphql';
-import { IGoodsSearchInput, GoodsSearchOutputType } from '../types/goods';
-import { IGoods } from 'gql/models/goods';
+import { GoodsSearchOutputType } from '../types/goods';
 
 const Goods = db.models.Goods;
 
@@ -18,9 +17,9 @@ export const goods: FieldConfig = {
       description: '一页多少条目',
     },
   },
-  resolve: async (_: any, args: IGoodsSearchInput) => {
+  resolve: async (_: any, args: GOODS.ISearchInput) => {
     const { pageNo, pageSize } = args;
-    const goods = await Goods.findAll<IGoods>({
+    const goods = await Goods.findAll<GOODS.IGoodsType>({
       offset: (pageNo - 1) * pageSize,
       limit: pageSize,
       where: {

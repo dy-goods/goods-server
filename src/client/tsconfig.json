@@ -13,9 +13,12 @@
     "sourceMap": true,
     "target": "ES5",
     "lib": ["dom", "esnext"],
-    "typeRoots": ["../**/*", "../../node_modules/@types/"],
+    "typeRoots": [
+      "../**/*",
+      "../../node_modules/@types/"
+    ],
     "baseUrl": "."
   },
-  "include": ["**/*"],
+  "include": ["**/*", "../types/**/*"],
   "exclude": ["assets/"]
 }

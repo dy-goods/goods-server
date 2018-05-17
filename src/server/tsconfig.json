@@ -11,10 +11,13 @@
     "sourceMap": true,
     "target": "ES6",
     "lib": ["dom.iterable", "scripthost", "es2017", "esnext"],
-    "typeRoots": ["./**/*", "../../node_modules/@types/"],
+    "typeRoots": [
+      "../**/*",
+      "../../node_modules/@types/"
+    ],
     "outDir": "../../dist/server",
     "experimentalDecorators": true,
     "baseUrl": "."
   },
-  "include": ["**/*"]
+  "include": ["**/*", "../types/**/*"]
 }

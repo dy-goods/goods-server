@@ -1,9 +1,7 @@
 import {
   AddGoodsInputType,
-  IAddGoogdsArgs,
   AddGoodsOutputType,
   UpdateGoodsInputType,
-  IUpdateGoodsInputArgs,
 } from '../types/goods';
 import db from '../../models';
 
@@ -20,7 +18,7 @@ export const addGoods = {
       type: new GraphQLNonNull(AddGoodsInputType),
     },
   },
-  resolve: async (_: any, args: IAddGoogdsArgs) => {
+  resolve: async (_: any, args: GOODS.IAddArgs) => {
     const goods = args.input;
     await db.sync();
     // 同步所有已定义的模型到数据库中,即建立对应的表,必须先sync完，才能往表里添加行
@@ -44,7 +42,7 @@ export const updateGoods = {
       type: UpdateGoodsInputType,
     },
   },
-  resolve: async (_: any, args: IUpdateGoodsInputArgs) => {
+  resolve: async (_: any, args: GOODS.IUpdateInputArgs) => {
     const input = args.input;
     const goods = await Goods.findOne({
       where: {

@@ -6,12 +6,11 @@ import {
   GraphQLList,
   GraphQLInputObjectType,
 } from 'graphql';
-import { IGoods } from '../../models/goods';
 import { GraphQLBoolean } from 'graphql/type/scalars';
 
 export const GoodsType = new GraphQLObjectType({
   name: 'Goods',
-  fields: (): FieldConfigMap<IGoods> => ({
+  fields: (): FieldConfigMap<GOODS.IGoodsType> => ({
     isDeleted: {
       type: GraphQLBoolean,
       description: '软删除标记',
@@ -67,26 +66,9 @@ export const GoodsType = new GraphQLObjectType({
   }),
 });
 
-export interface IPage {
-  pageNo: number; //	目前第几页
-  pageSize: number; //	一页多少条目
-  totalCount: number; //	总共多少条目
-  totalPageCount: number; //	总共多少页
-}
-
-export interface IGoodsSearchOutput {
-  goods: IGoods[];
-  page: IPage;
-}
-
-export interface IGoodsSearchInput {
-  pageNo: number; //	目前第几页
-  pageSize: number; //	一页多少条目
-}
-
 export const GoodsSearchInputType = new GraphQLObjectType({
-  name: 'GoodsSearchInput',
-  fields: (): FieldConfigMap<IGoodsSearchInput> => ({
+  name: 'SearchGoodsInput',
+  fields: (): FieldConfigMap<GOODS.ISearchInput> => ({
     pageNo: {
       type: GraphQLInt,
       description: '第几页',
@@ -122,7 +104,7 @@ export const PageType = new GraphQLObjectType({
 
 export const GoodsSearchOutputType = new GraphQLObjectType({
   name: 'GoodsSearchOutput',
-  fields: (): FieldConfigMap<IGoodsSearchOutput> => ({
+  fields: (): FieldConfigMap<GOODS.ISearchOutput> => ({
     goods: {
       type: new GraphQLList(GoodsType),
     },
@@ -132,47 +114,9 @@ export const GoodsSearchOutputType = new GraphQLObjectType({
   }),
 });
 
-export interface GoodsSearchInput {
-  pageNo: number; //	目前第几页
-  pageSize: number; //	一页多少条目
-}
-
-export interface IAddGoogdsArgs {
-  input: IAddGoodsInput;
-}
-export interface IAddGoodsInput {
-  videoUrl: string;
-  stars: number; // 点赞数
-  discount: number; // 折扣
-  buyCount: number; // 购买数量
-  taobaoPrice: number;
-  price: number; // 以分为单位
-  title: string;
-  imgUrl: string;
-  labels: string; // 标签, eg好玩到爆，省事的气球车
-}
-export interface IAddGoodsOutput {
-  id: string;
-}
-export interface IUpdateGoodsInputArgs {
-  input: IUpdateGoodsInput;
-}
-export interface IUpdateGoodsInput {
-  id: string;
-  videoUrl: string;
-  stars: number; // 点赞数
-  discount: number; // 折扣
-  buyCount: number; // 购买数量
-  taobaoPrice: number;
-  price: number; // 以分为单位
-  title: string;
-  imgUrl: string;
-  labels: string; // 标签, eg好玩到爆，省事的气球车
-}
-
 export const AddGoodsInputType = new GraphQLInputObjectType({
   name: 'AddGoodsInput',
-  fields: (): InputFieldConfigMap<IAddGoodsInput> => ({
+  fields: (): InputFieldConfigMap<GOODS.IAddInput> => ({
     videoUrl: {
       type: GraphQLString,
       description: '视频链接',
@@ -214,7 +158,7 @@ export const AddGoodsInputType = new GraphQLInputObjectType({
 
 export const UpdateGoodsInputType = new GraphQLInputObjectType({
   name: 'UpdateGoodsInput',
-  fields: (): InputFieldConfigMap<IUpdateGoodsInput> => ({
+  fields: (): InputFieldConfigMap<GOODS.IUpdateInput> => ({
     id: {
       type: GraphQLString,
       description: 'id',
@@ -260,7 +204,7 @@ export const UpdateGoodsInputType = new GraphQLInputObjectType({
 
 export const AddGoodsOutputType = new GraphQLObjectType({
   name: 'AddGoodsOutputType',
-  fields: (): FieldConfigMap<IAddGoodsOutput> => ({
+  fields: (): FieldConfigMap<GOODS.IAdOutput> => ({
     id: {
       type: GraphQLString,
       description: 'id',
