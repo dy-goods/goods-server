@@ -57,7 +57,7 @@ local -> push -> origin -> pull request -> upstream
 upstream配置
 
 ```bash
-$ gt remote add upstream https://github.com/dy-goods/fe.goods-server.git
+$ gt remote add upstream https://github.com/dy-goods/goods-server.git
 ```
 
 例子
