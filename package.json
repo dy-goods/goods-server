@@ -58,6 +58,7 @@
     "@types/react-transition-group": "^2.0.8",
     "@types/request": "^2.47.0",
     "@types/sequelize": "^4.27.18",
+    "@types/uuid": "^3.4.3",
     "@types/webpack": "^4.1.6",
     "@types/winston": "^2.3.9",
     "awesome-typescript-loader": "3.4.1",

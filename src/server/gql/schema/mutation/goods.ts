@@ -4,6 +4,7 @@ import {
   UpdateGoodsInputType,
 } from '../types/goods';
 import db from '../../models';
+import * as uuid from 'uuid/v4';
 
 const Goods = db.models.Goods;
 
@@ -22,7 +23,7 @@ export const addGoods = {
     const goods = args.input;
     await db.sync();
     // 同步所有已定义的模型到数据库中,即建立对应的表,必须先sync完，才能往表里添加行
-    const id = `d-${Date.now()}`;
+    const id = uuid();
     await Goods.create({
       id,
       ...goods,
