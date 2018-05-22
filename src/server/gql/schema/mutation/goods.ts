@@ -39,7 +39,7 @@ export const updateGoods = {
   description: '修改商品',
   args: {
     input: {
-      type: UpdateGoodsInputType,
+      type: new GraphQLNonNull(UpdateGoodsInputType),
     },
   },
   resolve: async (_: any, args: GOODS.IUpdateInputArgs) => {
@@ -53,7 +53,8 @@ export const updateGoods = {
     for (const key of Object.keys(input)) {
       goods[key] = (input as any)[key];
     }
-    goods.save();
+    await goods.save();
+    return true;
   },
 };
 
@@ -62,7 +63,7 @@ export const deleteGoods = {
   description: '删除商品',
   args: {
     id: {
-      type: GraphQLString,
+      type: new GraphQLNonNull(GraphQLString),
       description: '商品ID',
     },
   },
@@ -79,6 +80,7 @@ export const deleteGoods = {
       },
     });
     goods.isDeleted = true;
-    goods.save();
+    await goods.save();
+    return true;
   },
 };
