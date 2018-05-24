@@ -11,7 +11,9 @@ app.use(bodyParser());
 
 app.use(routes);
 app.use(ctx => {
-  ctx.body = 'GraphQL BackEnd';
+  if (!ctx.path.includes('statics')) {
+    ctx.body = 'GraphQL BackEnd';
+  }
 });
 
 export default app;

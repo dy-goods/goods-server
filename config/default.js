@@ -9,5 +9,5 @@ module.exports = {
   webpack: {
     port: 9091,
   },
-  onlineHost: 'http://www.53zi.com/statics',
+  onlineHost: 'http://www.53zi.com',
 };
