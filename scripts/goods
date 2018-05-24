@@ -1,0 +1,27 @@
+server {
+    listen      80; # 监听80端口
+
+    root       /srv/goods-server/statics;
+    access_log /srv/goods-server/log/access_log;
+    error_log  /srv/goods-server/log/error_log;
+
+    # server_name goods-server.liaoxuefeng.com; # 配置域名
+
+    # 处理静态文件/favicon.ico:
+    location /favicon.ico {
+        root /srv/goods-server/statics;
+    }
+
+    # 处理静态资源:
+    location ~ ^\/statics\/.*$ {
+        root /srv/goods-server/statics;
+    }
+
+    # 动态请求转发到9090端口(gunicorn):
+    location / {
+        proxy_pass       http://127.0.0.1:9090;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
