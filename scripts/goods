@@ -5,7 +5,7 @@ server {
     access_log /srv/goods-server/log/access_log;
     error_log  /srv/goods-server/log/error_log;
 
-    # server_name goods-server.liaoxuefeng.com; # 配置域名
+    # server_name www.53zi.com; # 配置域名
 
     # 处理静态文件/favicon.ico:
     location /favicon.ico {
