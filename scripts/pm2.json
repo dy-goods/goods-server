@@ -1,6 +1,6 @@
 {
   "apps" : [{
-    "name"               : "fe.seed",
+    "name"               : "goods",
     "script"             : "dist/server/index.js",
     "env": {
       "COMMON_VARIABLE": "true",
