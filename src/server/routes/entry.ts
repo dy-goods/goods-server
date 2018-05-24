@@ -27,7 +27,7 @@ function fileResolver(file: string) {
       'webpack.port',
     )}${file}`;
   } else {
-    return `${config.get('onlineHost')}/${file}`;
+    return `${config.get('onlineHost')}${file}`;
   }
 }
 

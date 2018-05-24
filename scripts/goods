@@ -1,7 +1,6 @@
 server {
     listen      80 default; # 监听80端口
 
-    root       /srv/goods-server/statics;
     access_log /srv/goods-server/logs/nginx/access_log;
     error_log  /srv/goods-server/logs/nginx/error_log;
 
