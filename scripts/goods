@@ -1,10 +1,13 @@
 server {
-    listen      80 default; # 监听80端口
+    listen 80 default;
+    return 403;
+}
+server {
+    listen      80; # 监听80端口
+    server_name www.53zi.com; # 配置域名
 
     access_log /srv/goods-server/logs/nginx/access_log;
     error_log  /srv/goods-server/logs/nginx/error_log;
-
-    # server_name www.53zi.com; # 配置域名
 
     # 处理静态文件/favicon.ico:
     location /favicon.ico {
@@ -13,7 +16,7 @@ server {
 
     # 处理静态资源:
     location ~ ^\/statics\/.*$ {
-        root /srv/goods-server/statics;
+        root /srv/goods-server;
     }
 
     # 动态请求转发到9090端口(gunicorn):
