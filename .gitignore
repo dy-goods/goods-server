@@ -5,6 +5,7 @@ node_modules
 .DS_Store
 .vscode
 statics
+logs
 src/.DS_Store
 buildMeta.json
 test.sqlite

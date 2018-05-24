@@ -2,8 +2,8 @@ server {
     listen      80; # 监听80端口
 
     root       /srv/goods-server/statics;
-    access_log /srv/goods-server/log/access_log;
-    error_log  /srv/goods-server/log/error_log;
+    access_log /srv/goods-server/logs/nginx/access_log;
+    error_log  /srv/goods-server/logs/nginx/error_log;
 
     # server_name www.53zi.com; # 配置域名
 
