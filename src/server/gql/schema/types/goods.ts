@@ -2,11 +2,12 @@ import {
   GraphQLObjectType,
   GraphQLString,
   GraphQLInt,
+  GraphQLFloat,
   GraphQLNonNull,
   GraphQLList,
+  GraphQLBoolean,
   GraphQLInputObjectType,
 } from 'graphql';
-import { GraphQLBoolean } from 'graphql/type/scalars';
 
 export const GoodsType = new GraphQLObjectType({
   name: 'Goods',
@@ -28,7 +29,7 @@ export const GoodsType = new GraphQLObjectType({
       description: '点赞数',
     },
     discount: {
-      type: GraphQLInt,
+      type: GraphQLFloat,
       description: '折扣',
     },
     buyCount: {
@@ -126,7 +127,7 @@ export const AddGoodsInputType = new GraphQLInputObjectType({
       description: '点赞数',
     },
     discount: {
-      type: GraphQLInt,
+      type: GraphQLFloat,
       description: '折扣',
     },
     buyCount: {
@@ -172,7 +173,7 @@ export const UpdateGoodsInputType = new GraphQLInputObjectType({
       description: '点赞数',
     },
     discount: {
-      type: GraphQLInt,
+      type: GraphQLFloat,
       description: '折扣',
     },
     buyCount: {

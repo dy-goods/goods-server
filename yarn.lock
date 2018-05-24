@@ -255,6 +255,12 @@
   dependencies:
     source-map "^0.6.1"
 
+"@types/uuid@^3.4.3":
+  version "3.4.3"
+  resolved "http://registry.npm.taobao.org/@types/uuid/download/@types/uuid-3.4.3.tgz#121ace265f5569ce40f4f6d0ff78a338c732a754"
+  dependencies:
+    "@types/node" "*"
+
 "@types/validator@*":
   version "9.4.1"
   resolved "http://registry.npm.taobao.org/@types/validator/download/@types/validator-9.4.1.tgz#bea5a290e61f1cbf12af3fd878706aeec2ba0087"

@@ -10,7 +10,7 @@
     "server": "cross-env NODE_ENV=development node --inspect=9092 dist/server/",
     "predev": "concurrently \"del -f ./dist/*\" \"tsc -p src/server\"",
     "dev": "concurrently --names \"TSC,NODE\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm run watch\" \"npm run server\"",
-    "build": "NODE_ENV=production node scripts/build",
+    "build": "cross-env NODE_ENV=production node scripts/build",
     "lint.client": "tslint -p src/client/tsconfig.json -e *.d.ts -c tslint.json",
     "lint.server": "tslint -p src/server/tsconfig.json -e *.d.ts -c tslint.json",
     "lint.fix": "prettier --write \"./**/*.{js,tsx,ts}\""
@@ -58,6 +58,7 @@
     "@types/react-transition-group": "^2.0.8",
     "@types/request": "^2.47.0",
     "@types/sequelize": "^4.27.18",
+    "@types/uuid": "^3.4.3",
     "@types/webpack": "^4.1.6",
     "@types/winston": "^2.3.9",
     "awesome-typescript-loader": "3.4.1",

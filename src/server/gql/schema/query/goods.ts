@@ -10,15 +10,17 @@ export const goods: FieldConfig = {
   args: {
     pageNo: {
       type: GraphQLInt,
-      description: '第几页',
+      description: '第几页，默认值是1',
     },
     pageSize: {
       type: GraphQLInt,
-      description: '一页多少条目',
+      description: '一页多少条目，默认值是10',
     },
   },
   resolve: async (_: any, args: GOODS.ISearchInput) => {
-    const { pageNo, pageSize } = args;
+    let { pageNo, pageSize } = args;
+    pageNo = pageNo || 1;
+    pageSize = pageSize || 10;
     const goods = await Goods.findAll<GOODS.IGoodsType>({
       offset: (pageNo - 1) * pageSize,
       limit: pageSize,
@@ -26,12 +28,13 @@ export const goods: FieldConfig = {
         isDeleted: false,
       },
     });
-    const totalCount: any = await Goods.findAll<number>({
+    let totalCount: any = await Goods.findAll<number>({
       attributes: [[db.fn('COUNT', db.col('*')), 'totalCount']],
       where: {
         isDeleted: false,
       },
     });
+    totalCount = totalCount[0].dataValues.totalCount;
     return {
       page: {
         pageNo,

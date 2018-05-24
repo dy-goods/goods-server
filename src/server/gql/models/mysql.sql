@@ -22,7 +22,7 @@ create table if not exists `Goods` (
     `title` varchar(100) not null,
     `imgUrl` varchar(100) not null,
     `labels` varchar(100) not null,
-    `isDeleted` int not nul,
+    `isDeleted` int not null,
     `createdAt` datetime,
     `updatedAt` datetime
 ) engine=innodb default charset=utf8;
