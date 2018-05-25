@@ -50,7 +50,7 @@ export class EntryController {
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
         <script>
-          var fontSize = window.innerWidth / 1024 * 75;
+          var fontSize = window.innerWidth / 1280 * 75;
           document.documentElement.style.fontSize = fontSize + 'px';
         </script>
       </head>

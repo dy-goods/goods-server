@@ -32,10 +32,6 @@ h4 {
   font-weight: normal;
 }
 
-span {
-  display: block;
-}
-
 button {
   text-align: center;
   white-space: nowrap;
@@ -47,6 +43,4 @@ button {
 button:focus {
   outline: 0;
 }
-* {
-  user-select: none;
-}
+
