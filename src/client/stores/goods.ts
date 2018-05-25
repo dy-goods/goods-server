@@ -145,5 +145,6 @@ export default class GoodsStore {
   @action
   selectPage(pageNo: number) {
     this.pageInfo.pageNo = pageNo;
+    this.getGoodsList();
   }
 }
