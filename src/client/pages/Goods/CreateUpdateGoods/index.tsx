@@ -94,11 +94,10 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
     toast(`修改${ret ? '成功' : '失败'}`);
   }
   setGoodsAttr(value: any, attr: string) {
+    const { form } = this.state;
+    (form as any)[attr] = value;
     this.setState({
-      form: {
-        ...this.state.form,
-        [attr]: value,
-      },
+      form,
     });
   }
   render() {
@@ -118,7 +117,7 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
               <span>视频链接</span>
               <input
                 type="text"
-                placeholder=""
+                placeholder="请输入"
                 value={this.state.form.videoUrl}
                 onChange={e => this.setGoodsAttr(e.target.value, 'videoUrl')}
               />
@@ -127,7 +126,7 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
               <span>点赞数</span>
               <input
                 type="text"
-                placeholder=""
+                placeholder="请输入"
                 value={this.state.form.stars || ''}
                 onChange={e =>
                   this.setGoodsAttr(Number(e.target.value), 'stars')
@@ -138,7 +137,7 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
               <span>折扣</span>
               <input
                 type="text"
-                placeholder=""
+                placeholder="请输入"
                 value={this.state.form.discount || ''}
                 onChange={e =>
                   this.setGoodsAttr(Number(e.target.value), 'discount')
@@ -149,7 +148,7 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
               <span>购买数量</span>
               <input
                 type="text"
-                placeholder=""
+                placeholder="请输入"
                 value={this.state.form.buyCount || ''}
                 onChange={e =>
                   this.setGoodsAttr(Number(e.target.value), 'buyCount')
@@ -160,7 +159,7 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
               <span>淘宝价格</span>
               <input
                 type="text"
-                placeholder=""
+                placeholder="请输入"
                 value={this.state.form.taobaoPrice || ''}
                 onChange={e =>
                   this.setGoodsAttr(Number(e.target.value), 'taobaoPrice')
@@ -171,7 +170,7 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
               <span>价格，以分为单位</span>
               <input
                 type="text"
-                placeholder=""
+                placeholder="请输入"
                 value={this.state.form.price || ''}
                 onChange={e =>
                   this.setGoodsAttr(Number(e.target.value), 'price')
@@ -182,7 +181,7 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
               <span>标题</span>
               <input
                 type="text"
-                placeholder=""
+                placeholder="请输入"
                 value={this.state.form.title}
                 onChange={e => this.setGoodsAttr(e.target.value, 'title')}
               />
@@ -191,7 +190,7 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
               <span>图片链接</span>
               <input
                 type="text"
-                placeholder=""
+                placeholder="请输入"
                 value={this.state.form.imgUrl}
                 onChange={e => this.setGoodsAttr(e.target.value, 'imgUrl')}
               />
@@ -200,7 +199,7 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
               <span>标签, eg好玩到爆，省事的气球车</span>
               <input
                 type="text"
-                placeholder=""
+                placeholder="请输入"
                 value={this.state.form.labels}
                 onChange={e => this.setGoodsAttr(e.target.value, 'labels')}
               />
