@@ -10,4 +10,5 @@ module.exports = {
     port: 9091,
   },
   onlineHost: 'http://www.53zi.com',
+  graphqlUri: 'http://www.53zi.com/graphql',
 };

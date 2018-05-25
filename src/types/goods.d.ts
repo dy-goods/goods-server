@@ -10,13 +10,13 @@ declare namespace GOODS {
     title: string; // 标题
     imgUrl: string; // 图片链接
     labels: string; // 标签, eg好玩到爆，省事的气球车
-    isDeleted: boolean;
+    isDeleted?: boolean;
     createdAt: number;
     updatedAt: number;
   }
 
   interface ISearchOutput {
-    goods: GOODS.IGoodsType[];
+    items: GOODS.IGoodsType[];
     page: IPage;
   }
 

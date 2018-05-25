@@ -106,7 +106,7 @@ export const PageType = new GraphQLObjectType({
 export const GoodsSearchOutputType = new GraphQLObjectType({
   name: 'GoodsSearchOutput',
   fields: (): FieldConfigMap<GOODS.ISearchOutput> => ({
-    goods: {
+    items: {
       type: new GraphQLList(GoodsType),
     },
     page: {
