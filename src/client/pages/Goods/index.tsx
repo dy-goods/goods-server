@@ -122,7 +122,7 @@ export default class GoodsPage extends React.Component<IProps, IState> {
           <Paginator
             total={pageInfo.totalPageCount}
             curr={pageInfo.pageNo}
-            selectPage={this.props.goodsStore.selectPage}
+            selectPage={pageNo => this.props.goodsStore.selectPage(pageNo)}
           />
           <div className="total-count">一共有{pageInfo.totalCount}条记录</div>
         </footer>
