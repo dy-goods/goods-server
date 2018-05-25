@@ -4616,9 +4616,9 @@ pm2-multimeter@^0.1.2:
   dependencies:
     charm "~0.1.1"
 
-pm2@^2.10.3:
-  version "2.10.3"
-  resolved "http://registry.npm.taobao.org/pm2/download/pm2-2.10.3.tgz#0f33834a09a0610db65a3a0e10a281c123567732"
+pm2@^2.10.4:
+  version "2.10.4"
+  resolved "http://registry.npm.taobao.org/pm2/download/pm2-2.10.4.tgz#dd292fd26aed882f6e9f7b9652191387d2debe6a"
   dependencies:
     async "^2.5"
     blessed "^0.1.81"
