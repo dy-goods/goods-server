@@ -11,8 +11,8 @@ declare namespace GOODS {
     imgUrl: string; // 图片链接
     labels: string; // 标签, eg好玩到爆，省事的气球车
     isDeleted?: boolean;
-    createdAt: number;
-    updatedAt: number;
+    createdAt?: number;
+    updatedAt?: number;
   }
 
   interface ISearchOutput {

@@ -4,6 +4,7 @@ import gql from 'graphql-tag';
 
 export default class GoodsStore {
   @observable goodsList: IObservableArray<GOODS.IGoodsType> = observable([]);
+  @observable pageInfo: IPage;
 
   @action
   async getGoodsList(pageNo: number, pageSize?: number) {
@@ -43,10 +44,95 @@ export default class GoodsStore {
     if (ret.loading) {
       return;
     }
-    const goods = ret.data.goods.items;
-    if (goods && goods.length) {
-      runInAction(() => this.goodsList.replace(goods));
-      return goods;
+    const { items, page } = ret.data.goods;
+    if (items && items.length) {
+      runInAction(() => {
+        this.goodsList.replace(items);
+        this.pageInfo = page;
+      });
+      return items;
+    }
+  }
+
+  @action
+  async deleteGoods(id: string) {
+    const mutation = gql`
+      mutation deleteGoods($id: String!) {
+        deleteGoods(id: $id)
+      }
+    `;
+    const ret = await client.mutate<{
+      deleteGoods: boolean;
+    }>({
+      mutation,
+      variables: {
+        id,
+      },
+    });
+    if (ret.data && ret.data.deleteGoods) {
+      runInAction(() => {
+        const goods = this.goodsList.find(
+          item => item.id === id,
+        ) as GOODS.IGoodsType;
+        this.goodsList.remove(goods);
+        return true;
+      });
+    }
+  }
+
+  @action
+  async updateGoods(input: GOODS.IUpdateInput) {
+    const mutation = gql`
+      mutation updateGoods($input: UpdateGoodsInput!) {
+        updateGoods(input: $input)
+      }
+    `;
+    const ret = await client.mutate<{
+      updateGoods: boolean;
+    }>({
+      mutation,
+      variables: {
+        input,
+      },
+    });
+    if (ret.data && ret.data.updateGoods) {
+      runInAction(() => {
+        const id = this.goodsList.findIndex(item => item.id === input.id);
+        this.goodsList[id] = {
+          ...this.goodsList[id],
+          ...input,
+        };
+        return true;
+      });
+    }
+  }
+
+  @action
+  async addGoos(input: GOODS.IAddInput) {
+    const mutation = gql`
+      mutation addGoods($input: AddGoodsInput!) {
+        addGoods(input: $input) {
+          id
+        }
+      }
+    `;
+    const ret = await client.mutate<{
+      addGoods: GOODS.IAdOutput;
+    }>({
+      mutation,
+      variables: {
+        input,
+      },
+    });
+    if (ret.data && ret.data.addGoods) {
+      runInAction(() => {
+        this.goodsList.push({
+          ...input,
+          id: (ret.data as any).addGoods.id,
+          isDeleted: false,
+        });
+        return true;
+      });
     }
   }
 }
