@@ -25,13 +25,13 @@ export const goods: FieldConfig = {
       offset: (pageNo - 1) * pageSize,
       limit: pageSize,
       where: {
-        isDeleted: false,
+        isDeleted: 0,
       },
     });
     let totalCount: any = await Goods.findAll<number>({
       attributes: [[db.fn('COUNT', db.col('*')), 'totalCount']],
       where: {
-        isDeleted: false,
+        isDeleted: 0,
       },
     });
     totalCount = totalCount[0].dataValues.totalCount;
