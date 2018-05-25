@@ -14,9 +14,9 @@
     "log_date_format"    : "YYYY-MM-DD HH:mm Z",
     "max_memory_restart" : "700M",
     "merge_logs"         : true,
-    "error_file"         : "/var/goods-server/logs/pm2/error.log",
-    "out_file"           : "/var/goods-server/logs/pm2/out.log",
-    "pid_file"           : "/var/goods-server/logs/pm2/goods.pid",
+    "error_file"         : "/srv/goods-server/logs/pm2/error.log",
+    "out_file"           : "/srv/goods-server/logs/pm2/out.log",
+    "pid_file"           : "/srv/goods-server/logs/pm2/goods.pid",
     "watch"              : false
   }]
 }
