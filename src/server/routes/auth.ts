@@ -3,6 +3,6 @@ import { route } from './decorator';
 export class AuthController {
   @route('get', '/.well-known/pki-validation/fileauth.txt')
   async auth() {
-    return '201608241742072yvt8bxp9jv0ycginrnnebwgy1nvwgvxtssucy39w7b20nelfa';
+    return '201805240337123zrbho42qpe5ku5nmqab69kx5k392vh58hitanj6cr9bx2uh0y';
   }
 }
