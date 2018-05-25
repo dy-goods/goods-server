@@ -4,10 +4,16 @@ import gql from 'graphql-tag';
 
 export default class GoodsStore {
   @observable goodsList: IObservableArray<GOODS.IGoodsType> = observable([]);
-  @observable pageInfo: IPage;
+  @observable
+  pageInfo: IPage = {
+    pageNo: 1,
+    pageSize: 10,
+    totalCount: 0,
+    totalPageCount: 1,
+  };
 
   @action
-  async getGoodsList(pageNo: number, pageSize?: number) {
+  async getGoodsList() {
     const query = gql`
       query goods($pageNo: Int, $pageSize: Int) {
         goods(pageNo: $pageNo, pageSize: $pageSize) {
@@ -37,8 +43,8 @@ export default class GoodsStore {
     }>({
       query,
       variables: {
-        pageNo,
-        pageSize,
+        pageNo: this.pageInfo.pageNo,
+        pageSize: this.pageInfo.pageSize,
       },
     });
     if (ret.loading) {
@@ -75,8 +81,8 @@ export default class GoodsStore {
           item => item.id === id,
         ) as GOODS.IGoodsType;
         this.goodsList.remove(goods);
-        return true;
       });
+      return true;
     }
   }
 
@@ -102,8 +108,8 @@ export default class GoodsStore {
           ...this.goodsList[id],
           ...input,
         };
-        return true;
       });
+      return true;
     }
   }
 
@@ -131,8 +137,13 @@ export default class GoodsStore {
           id: (ret.data as any).addGoods.id,
           isDeleted: false,
         });
-        return true;
       });
+      return true;
     }
+  }
+
+  @action
+  selectPage(pageNo: number) {
+    this.pageInfo.pageNo = pageNo;
   }
 }
