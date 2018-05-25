@@ -1,0 +1,45 @@
+.paginator {
+  margin: 20px;
+  ul {
+    -webkit-user-select: none;
+    display: flex;
+    justify-content: center;
+    .pg-item {
+      list-style: none;
+      display: inline-block;
+      padding: 8px 13px;
+      border: 1px solid #ccc;
+      margin-right: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 16px;
+      color: #333;
+      background: #FFFFFF
+    }
+    .pg-item-curr {
+      background: #FF6D45;
+      color: #fff;
+    }
+    .paginator-disable {
+      cursor: auto;
+       color: #D8D8D8;
+       border: 1px solid #D8D8D8;
+       &:hover {
+         border:1px solid  #D8D8D8;
+       }
+    }
+    .pg-item-no {
+      background: none;
+      border:none;
+      cursor:default;
+      &:hover {
+        border: none;
+      }
+
+    }
+    li:hover {
+      border: 1px solid #AAAAAA;
+
+    }
+  }
+}

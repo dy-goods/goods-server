@@ -1,0 +1,54 @@
+.toast-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  font-size: 24px;
+  color: white;
+  line-height: 1;
+  z-index: 99;
+  pointer-events: none;
+  span[class^='icon-'] {
+    vertical-align: text-bottom;
+    margin-right: 12px;
+  }
+}
+
+.toast-enter-active {
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.toast-leave-active {
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.toast-enter,
+.toast-leave {
+  opacity: 0;
+  transform: translate(-50%, 0%);
+}
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}

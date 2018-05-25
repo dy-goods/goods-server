@@ -1,0 +1,29 @@
+server {
+    listen 80 default;
+    return 403;
+}
+server {
+    listen      80; # 监听80端口
+    server_name www.53zi.com; # 配置域名
+
+    access_log /srv/goods-server/logs/nginx/access_log;
+    error_log  /srv/goods-server/logs/nginx/error_log;
+
+    # 处理静态文件/favicon.ico:
+    location /favicon.ico {
+        root /srv/goods-server/statics;
+    }
+
+    # 处理静态资源:
+    location ~ ^\/statics\/.*$ {
+        root /srv/goods-server;
+    }
+
+    # 动态请求转发到9090端口(gunicorn):
+    location / {
+        proxy_pass       http://127.0.0.1:9090;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}

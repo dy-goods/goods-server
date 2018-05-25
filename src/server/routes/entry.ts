@@ -27,7 +27,7 @@ function fileResolver(file: string) {
       'webpack.port',
     )}${file}`;
   } else {
-    return `${config.get('onlineHost')}/@${file}`;
+    return `${config.get('onlineHost')}${file}`;
   }
 }
 
@@ -48,7 +48,7 @@ export class EntryController {
       <head>
         <title>抖友好物说</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
         <script>
           var fontSize = window.innerWidth / 1024 * 75;
           document.documentElement.style.fontSize = fontSize + 'px';

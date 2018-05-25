@@ -1,20 +1,11 @@
 {
+  "extends": "../../tsconfig",
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "allowJs": true,
-    "module": "commonjs",
-    "removeComments": true,
-    "strictNullChecks": true,
-    "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "sourceMap": true,
     "target": "ES6",
-    "lib": ["dom.iterable", "scripthost", "es2017"],
+    "lib": ["dom.iterable", "scripthost", "es2017", "esnext"],
     "typeRoots": ["../**/*", "../../node_modules/@types/"],
     "outDir": "../../dist/server",
-    "experimentalDecorators": true,
     "baseUrl": "."
   },
-  "include": ["**/*"]
+  "include": ["**/*", "../types/**/*"]
 }
