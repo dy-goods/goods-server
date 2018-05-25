@@ -39,9 +39,9 @@ export class EntryController {
      */
     const mainFile = buildMeta['app'] || 'app.js';
 
-    const isProd = config.get('isProd');
     const browserConfig = {
-      prod: isProd,
+      prod: config.get('isProd'),
+      graphqlUri: config.get('graphqlUri'),
     };
 
     return `<html>

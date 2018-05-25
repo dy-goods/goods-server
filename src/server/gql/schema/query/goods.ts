@@ -21,7 +21,7 @@ export const goods: FieldConfig = {
     let { pageNo, pageSize } = args;
     pageNo = pageNo || 1;
     pageSize = pageSize || 10;
-    const goods = await Goods.findAll<GOODS.IGoodsType>({
+    const items = await Goods.findAll<GOODS.IGoodsType>({
       offset: (pageNo - 1) * pageSize,
       limit: pageSize,
       where: {
@@ -42,7 +42,7 @@ export const goods: FieldConfig = {
         totalCount,
         totalPageCount: Math.ceil(totalCount / pageSize),
       },
-      goods,
+      items,
     };
   },
 };
