@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_search</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="6" y="12" width="2" height="8" rx="1"></rect>
+    </defs>
+    <g id="3.2--会员迭代六-无连锁" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-10" transform="translate(10.020815, 10.020815) rotate(-45.000000) translate(-10.020815, -10.020815) translate(3.020815, 0.020815)">
+            <circle id="Oval-2" stroke="#FF6D45" stroke-width="2" cx="7" cy="7" r="6"></circle>
+            <g id="Rectangle-6">
+                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <rect stroke="#FF6D45" stroke-width="1" x="6.5" y="12.5" width="1" height="7" rx="0.5"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

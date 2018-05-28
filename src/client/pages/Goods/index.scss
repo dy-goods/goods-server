@@ -1,0 +1,217 @@
+.goods-page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .goods-page-header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: #FBF7ED;
+    border: 1px solid #E8DBCA;
+    /*no*/
+    height: 60px;
+    line-height: 60px;
+    padding: 0 30px;
+    .hint {
+      font-family: NotoSansHans-Medium;
+      font-size: 18px;
+      color: #CCAC9A;
+      letter-spacing: 0;
+      font-weight: bold;
+    }
+  }
+  .goods-page-middle {
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    .goods-page-search {
+      height: 44px;
+      margin-bottom: 60px;
+      display: flex;
+      button {
+        background-image: linear-gradient(-180deg, #FFFFFF 0%, #FDF9F1 98%);
+        border: 1px solid #E8DBCA;
+        /*no*/
+        border-radius: 4px;
+        /*no*/
+        width: 100px;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        font-family: DroidSansFallback;
+        font-size: 16px;
+        color: #77682C;
+        text-align: center;
+        padding: 0;
+        cursor: pointer;
+        margin-left: 24px;
+      }
+      .input {
+        flex: 1;
+        position: relative;
+        .search {
+          position: absolute;
+          top: 12px;
+          left: 13px;
+          font-size: 16px;
+          color: #CCAC9A;
+        }
+        input {
+          width: 100%;
+          background: #FFFFFF;
+          border: 1px solid #E8DBCA;
+          /*no*/
+          border-radius: 4px;
+          /*no*/
+          height: 44px;
+          line-height: 44px;
+          font-family: Roboto-Regular;
+          font-size: 16px;
+          color: #441A00;
+          padding: 0 40px;
+          box-sizing: border-box;
+          outline: none;
+          &::-webkit-input-placeholder {
+            font-family: NotoSansHans-Regular;
+            font-size: 16px;
+            color: #CCAC9A;
+          }
+        }
+      }
+    }
+    .goods-list {
+      background: #FEFCF8;
+      border: 1px solid #E8DBCA;
+      /*no*/
+      border-radius: 4px;
+      /*no*/
+      overflow-x: hidden;
+      overflow-y: auto;
+      margin: 0;
+      padding: 0;
+      flex: 1;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        &:first-child {
+          position: absolute;
+          top: 64px;
+          left: 0;
+          right: 0;
+          height: 40px;
+          background: #FBF7ED;
+          border-top: 1px solid #E8DBCA;
+          /*no*/
+          border-left: 1px solid #E8DBCA;
+          /*no*/
+          border-right: 1px solid #E8DBCA;
+          /*no*/
+          span {
+            border: none;
+            padding: 0 13px;
+            line-height: 40px;
+          }
+        }
+        &.goods-empty {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          flex: 1;
+          justify-content: center;
+          flex-direction: column;
+          border: none;
+          div {
+            text-align: center;
+          }
+          .text {
+            font-family: NotoSansHans-Regular;
+            font-size: 16px;
+            color: #BB927C;
+            letter-spacing: 0;
+          }
+        }
+        border-bottom: 1px solid #E8DBCA;
+        /*no*/
+        &>span {
+          word-break: break-all;
+          word-wrap: break-word;
+          border-right: 1px solid #E8DBCA;
+          display: inline-block;
+          padding: 13px;
+          text-align: center;
+          /*no*/
+          font-family: DroidSansFallback;
+          font-size: 14px;
+          color: #441A00;
+          &:last-child {
+            border-right: none;
+          }
+        }
+        .video-url {
+          flex: 218;
+        }
+        .stars {
+          flex: 100;
+        }
+        .discount {
+          flex: 100;
+        }
+        .buy-count {
+          flex: 100;
+        }
+        .taobao-price {
+          flex: 100;
+        }
+        .price {
+          flex: 140;
+        }
+        .title {
+          flex: 100;
+        }
+        .img-url {
+          flex: 270;
+        }
+        .babels {
+          flex: 270;
+        }
+        .handle {
+          flex: 146;
+          display: flex;
+          justify-content: space-between;
+          span {
+            font-family: DroidSansFallback;
+            font-size: 14px;
+            color: #008AFF;
+            letter-spacing: 0;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .goods-paginator {
+      margin-top: 20px;
+      height: 60px;
+      text-align: center;
+      .total-count {
+        font-family: NotoSansHans-Regular;
+        font-size: 16px;
+        color: #BB927C;
+        letter-spacing: 0;
+        text-align: center;
+      }
+    }
+  }
+}

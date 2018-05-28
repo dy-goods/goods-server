@@ -51,27 +51,49 @@ export default class GoodsPage extends React.Component<IProps, IState> {
     ) : (
       <div className="goods-page">
         <header className="goods-page-header">
-          <input
-            type="text"
-            readOnly
-            placeholder="暂不支持自定义搜索,若为空则为搜索全部"
-          />
-          <button className="search-goods" onClick={() => this.searchGoods()}>
-            搜索
-          </button>
-          <button
-            className="add-goods"
-            onClick={() =>
-              createUpdateGoods({
-                isCreateGoods: true,
-              })
-            }
-          >
-            添加商品
-          </button>
+          <div className="hint">抖友好物说后台页面</div>
         </header>
         <div className="goods-page-middle">
+          <div className="goods-page-search">
+            <div className="input">
+              <img
+                className="search"
+                src={require('../../assets/imgs/svg/search.svg')}
+                alt=""
+              />
+              <input
+                type="text"
+                readOnly
+                placeholder="暂不支持自定义搜索，若为空则为搜索全部"
+              />
+            </div>
+            <button className="search-goods" onClick={() => this.searchGoods()}>
+              搜索
+            </button>
+            <button
+              className="add-goods"
+              onClick={() =>
+                createUpdateGoods({
+                  isCreateGoods: true,
+                })
+              }
+            >
+              添加商品
+            </button>
+          </div>
           <ul className="goods-list">
+            <li>
+              <span className="video-url">视频链接</span>
+              <span className="stars">点赞数</span>
+              <span className="discount">折扣</span>
+              <span className="buy-count">购买数量</span>
+              <span className="taobao-price">淘宝价格</span>
+              <span className="price">价格</span>
+              <span className="title">标题</span>
+              <span className="img-url">图片链接</span>
+              <span className="babels">标签</span>
+              <span className="handle">操作</span>
+            </li>
             {goodsList.length ? (
               goodsList.map(goods => {
                 return (
@@ -114,18 +136,20 @@ export default class GoodsPage extends React.Component<IProps, IState> {
                 );
               })
             ) : (
-              <li className="goods-empty">没有商品</li>
+              <li className="goods-empty">
+                <span className="text">没有商品</span>
+              </li>
             )}
           </ul>
+          <div className="goods-paginator">
+            <Paginator
+              total={pageInfo.totalPageCount}
+              curr={pageInfo.pageNo}
+              selectPage={pageNo => this.props.goodsStore.selectPage(pageNo)}
+            />
+            <div className="total-count">一共有{pageInfo.totalCount}条记录</div>
+          </div>
         </div>
-        <footer className="goods-page-footer">
-          <Paginator
-            total={pageInfo.totalPageCount}
-            curr={pageInfo.pageNo}
-            selectPage={pageNo => this.props.goodsStore.selectPage(pageNo)}
-          />
-          <div className="total-count">一共有{pageInfo.totalCount}条记录</div>
-        </footer>
       </div>
     );
   }
