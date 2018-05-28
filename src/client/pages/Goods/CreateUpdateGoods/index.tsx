@@ -34,6 +34,7 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
         title: goods.title || '',
         imgUrl: goods.imgUrl || '',
         labels: goods.labels || '', // 标签, eg好玩到爆，省事的气球车
+        tkl: goods.tkl || '',
       },
     };
     this.updateGoods = this.updateGoods.bind(this);
@@ -50,6 +51,7 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
       title,
       imgUrl,
       labels,
+      tkl,
     } = this.state.form;
     return !(
       videoUrl &&
@@ -60,6 +62,7 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
       price &&
       title &&
       imgUrl &&
+      tkl &&
       labels
     );
   }
@@ -193,6 +196,15 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
                 placeholder="请输入"
                 value={this.state.form.imgUrl}
                 onChange={e => this.setGoodsAttr(e.target.value, 'imgUrl')}
+              />
+            </li>
+            <li className="test">
+              <span>淘口令</span>
+              <input
+                type="text"
+                placeholder="请输入"
+                value={this.state.form.tkl}
+                onChange={e => this.setGoodsAttr(e.target.value, 'tkl')}
               />
             </li>
             <li className="test">
