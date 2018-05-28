@@ -52,6 +52,10 @@ export const GoodsType = new GraphQLObjectType({
       type: GraphQLString,
       description: '商品图片',
     },
+    tkl: {
+      type: GraphQLString,
+      description: '淘口令',
+    },
     labels: {
       type: GraphQLString,
       description: '商品标签',
@@ -146,6 +150,10 @@ export const AddGoodsInputType = new GraphQLInputObjectType({
       type: GraphQLString,
       description: '商品标题',
     },
+    tkl: {
+      type: GraphQLString,
+      description: '淘口令',
+    },
     imgUrl: {
       type: GraphQLString,
       description: '商品图片',
@@ -191,6 +199,10 @@ export const UpdateGoodsInputType = new GraphQLInputObjectType({
     title: {
       type: GraphQLString,
       description: '商品标题',
+    },
+    tkl: {
+      type: GraphQLString,
+      description: '淘口令',
     },
     imgUrl: {
       type: GraphQLString,

@@ -21,6 +21,7 @@ create table if not exists `Goods` (
     `price` int not null,
     `title` varchar(100) not null,
     `imgUrl` varchar(100) not null,
+    `tkl` varchar(100) not null,
     `labels` varchar(100) not null,
     `isDeleted` int not null,
     `createdAt` datetime,

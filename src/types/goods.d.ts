@@ -27,6 +27,7 @@ declare namespace GOODS {
     price: number; // 以分为单位
     title: string;
     imgUrl: string;
+    tkl: string; // 淘口令
     labels: string; // 标签, eg好玩到爆，省事的气球车
   }
   interface IAdOutput {

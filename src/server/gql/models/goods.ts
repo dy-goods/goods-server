@@ -18,6 +18,7 @@ export default function(sequelize: Sequelize) {
       title: Seq.STRING(100),
       imgUrl: Seq.STRING(100),
       labels: Seq.STRING(100),
+      tkl: Seq.STRING(100),
       isDeleted: Seq.BOOLEAN,
       createdAt: Seq.BIGINT,
       updatedAt: Seq.BIGINT,

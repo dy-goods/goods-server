@@ -91,6 +91,7 @@ export default class GoodsPage extends React.Component<IProps, IState> {
               <span className="price">价格</span>
               <span className="title">标题</span>
               <span className="img-url">图片链接</span>
+              <span className="tkl">淘口令</span>
               <span className="babels">标签</span>
               <span className="handle">操作</span>
             </li>
@@ -106,6 +107,7 @@ export default class GoodsPage extends React.Component<IProps, IState> {
                     <span className="price">{goods.price}</span>
                     <span className="title">{goods.title}</span>
                     <span className="img-url">{goods.imgUrl}</span>
+                    <span className="tkl">{goods.tkl}</span>
                     <span className="babels">{goods.labels}</span>
                     <span className="handle">
                       <span

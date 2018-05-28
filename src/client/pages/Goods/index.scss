@@ -91,8 +91,7 @@
       /*no*/
       border-radius: 4px;
       /*no*/
-      overflow-x: hidden;
-      overflow-y: auto;
+      overflow: auto;
       margin: 0;
       padding: 0;
       flex: 1;
@@ -125,7 +124,7 @@
         }
         &.goods-empty {
           position: absolute;
-          top: 0;
+          top: 120px;
           left: 0;
           right: 0;
           bottom: 0;
@@ -149,6 +148,7 @@
           word-break: break-all;
           word-wrap: break-word;
           border-right: 1px solid #E8DBCA;
+          /*no*/
           display: inline-block;
           padding: 13px;
           text-align: center;
@@ -167,7 +167,7 @@
           flex: 100;
         }
         .discount {
-          flex: 100;
+          flex: 50;
         }
         .buy-count {
           flex: 100;
@@ -176,13 +176,16 @@
           flex: 100;
         }
         .price {
-          flex: 140;
+          flex: 50;
         }
         .title {
           flex: 100;
         }
         .img-url {
           flex: 270;
+        }
+        .tkl {
+          flex: 100;
         }
         .babels {
           flex: 270;

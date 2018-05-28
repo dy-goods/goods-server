@@ -31,6 +31,6 @@ module.exports = {
       mergeIdents: false,
       reduceIdents: false,
       safe: true,
-    })
+    }),
   ],
 };

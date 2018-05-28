@@ -17,6 +17,7 @@ export default async function test() {
     title: '标题',
     imgUrl: '图片链接',
     isDeleted: 0,
+    tkl: '淘口令',
     labels: '好玩到爆，省事的气球车', // 标签, eg好玩到爆，省事的气球车
   });
   console.log('created: ' + JSON.stringify(good, null, 2));

@@ -34,6 +34,7 @@ export default class GoodsStore {
             title
             imgUrl
             labels
+            tkl
           }
         }
       }
