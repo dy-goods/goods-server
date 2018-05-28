@@ -1,6 +1,7 @@
 import * as path from 'path';
 import * as config from 'config';
 import { route } from './decorator';
+const UE_WIDTH = 1366;
 
 /**
  * 前端构建信息
@@ -50,7 +51,7 @@ export class EntryController {
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
         <script>
-          var fontSize = window.innerWidth / 1280 * 75;
+          var fontSize = window.innerWidth / ${UE_WIDTH} * 75;
           document.documentElement.style.fontSize = fontSize + 'px';
         </script>
       </head>
