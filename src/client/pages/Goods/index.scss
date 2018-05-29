@@ -161,7 +161,7 @@
         .video-url {
           flex: 300;
           video {
-            width: 200px;
+            width: 100%;
             height: 100px;
           }
         }
@@ -183,7 +183,7 @@
         .img-url {
           flex: 150;
           img {
-            width: 100px;
+            width: 100%;
             height: 80px;
           }
         }
