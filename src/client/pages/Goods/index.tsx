@@ -7,6 +7,7 @@ import Paginator from '../../components/Paginator';
 import { alert } from '../../components/Alert';
 import { createUpdateGoods } from './CreateUpdateGoods';
 import './index.scss';
+import { priceText } from '../../utils';
 
 type IProps = {
   goodsStore: GoodsStore;
@@ -83,33 +84,56 @@ export default class GoodsPage extends React.Component<IProps, IState> {
           </div>
           <ul className="goods-list">
             <li>
-              <span className="video-url">视频链接</span>
-              <span className="stars">点赞数</span>
-              <span className="discount">折扣</span>
-              <span className="buy-count">购买数量</span>
-              <span className="taobao-price">淘宝价格</span>
-              <span className="price">价格</span>
-              <span className="title">标题</span>
-              <span className="img-url">图片链接</span>
-              <span className="tkl">淘口令</span>
-              <span className="babels">标签</span>
-              <span className="handle">操作</span>
+              <div className="video-url">视频链接</div>
+              <div className="stars">点赞数</div>
+              <div className="share-count">分享数</div>
+              <div className="buy-count">购买数量</div>
+              <div className="price">价格</div>
+              <div className="title">标题</div>
+              <div className="img-url">图片链接</div>
+              <div className="tkl">淘口令</div>
+              <div className="optional">可选信息</div>
+              <div className="handle">操作</div>
             </li>
             {goodsList.length ? (
               goodsList.map(goods => {
                 return (
                   <li key={goods.id}>
-                    <span className="video-url">{goods.videoUrl}</span>
-                    <span className="stars">{goods.stars}</span>
-                    <span className="discount">{goods.discount}</span>
-                    <span className="buy-count">{goods.buyCount}</span>
-                    <span className="taobao-price">{goods.taobaoPrice}</span>
-                    <span className="price">{goods.price}</span>
-                    <span className="title">{goods.title}</span>
-                    <span className="img-url">{goods.imgUrl}</span>
-                    <span className="tkl">{goods.tkl}</span>
-                    <span className="babels">{goods.labels}</span>
-                    <span className="handle">
+                    <div className="video-url">
+                      <video src={goods.videoUrl} controls={true}>
+                        您的浏览器不支持video标签
+                      </video>
+                    </div>
+                    <div className="stars">{goods.stars}</div>
+                    <div className="share-count">{goods.shareCount}</div>
+                    <div className="buy-count">{goods.buyCount}</div>
+                    <div className="price">{priceText(goods.price)}</div>
+                    <div className="title">{goods.title}</div>
+                    <div className="img-url">
+                      <img src={goods.imgUrl} alt="" />
+                    </div>
+                    <div className="tkl">{goods.tkl}</div>
+                    <div className="optional">
+                      <ul>
+                        {goods.recommends && (
+                          <li className="recommends">
+                            推荐语：{goods.recommends}
+                          </li>
+                        )}
+                        {goods.taobaoPrice && (
+                          <li className="taobao-price">
+                            淘宝价格：{priceText(goods.taobaoPrice)}
+                          </li>
+                        )}
+                        {goods.discount && (
+                          <li className="discount">折扣：{goods.discount}折</li>
+                        )}
+                        {goods.labels && (
+                          <li className="labels">标签：{goods.labels}</li>
+                        )}
+                      </ul>
+                    </div>
+                    <div className="handle">
                       <span
                         className="update-goods"
                         onClick={() =>
@@ -133,7 +157,7 @@ export default class GoodsPage extends React.Component<IProps, IState> {
                       >
                         删除
                       </span>
-                    </span>
+                    </div>
                   </li>
                 );
               })

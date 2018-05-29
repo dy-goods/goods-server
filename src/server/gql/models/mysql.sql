@@ -12,18 +12,22 @@ grant select, insert, update, delete on goods.* to 'www-data'@'localhost' identi
 use goods;
 
 create table if not exists `Goods` (
-    `id` varchar(50) primary key not null,
-    `videoUrl` varchar(100) not null,
+    `id` varchar(300) primary key not null,
+    `videoUrl` varchar(300) not null,
     `stars` int not null,
-    `discount` int not null,
+    `shareCount` int not null,
     `buyCount` int not null,
-    `taobaoPrice` int not null,
     `price` int not null,
-    `title` varchar(100) not null,
-    `imgUrl` varchar(100) not null,
-    `tkl` varchar(100) not null,
-    `labels` varchar(100) not null,
-    `isDeleted` int not null,
+    `title` varchar(300) not null,
+    `imgUrl` varchar(300) not null,
+    `tkl` varchar(300) not null,
+
+    `recommends` varchar(300) default '',
+    `taobaoPrice` int default 0,
+    `discount` decimal default 0,
+    `labels` varchar(300) default '',
+
+    `isDeleted` int not null default 0,
     `createdAt` datetime,
     `updatedAt` datetime
 ) engine=innodb default charset=utf8;

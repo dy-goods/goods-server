@@ -27,14 +27,16 @@ export default class GoodsStore {
             id
             videoUrl
             stars
-            discount
+            shareCount
             buyCount
-            taobaoPrice
             price
             title
             imgUrl
-            labels
             tkl
+            recommends
+            taobaoPrice
+            discount
+            labels
           }
         }
       }

@@ -6,20 +6,39 @@ export default function(sequelize: Sequelize) {
     'Goods',
     {
       id: {
-        type: Seq.STRING(50),
+        type: Seq.STRING(300),
         primaryKey: true,
       },
-      videoUrl: Seq.STRING(100),
+      videoUrl: Seq.STRING(300),
       stars: Seq.BIGINT,
-      discount: Seq.FLOAT,
+      shareCount: Seq.BIGINT,
       buyCount: Seq.BIGINT,
-      taobaoPrice: Seq.BIGINT,
       price: Seq.BIGINT,
-      title: Seq.STRING(100),
-      imgUrl: Seq.STRING(100),
-      labels: Seq.STRING(100),
-      tkl: Seq.STRING(100),
-      isDeleted: Seq.BOOLEAN,
+      title: Seq.STRING(300),
+      imgUrl: Seq.STRING(300),
+      tkl: Seq.STRING(300),
+
+      recommends: {
+        type: Seq.STRING(300),
+        defaultValue: '',
+      },
+      taobaoPrice: {
+        type: Seq.BIGINT,
+        defaultValue: 0,
+      },
+      discount: {
+        type: Seq.FLOAT,
+        defaultValue: 0,
+      },
+      labels: {
+        type: Seq.STRING(300),
+        defaultValue: '',
+      },
+
+      isDeleted: {
+        type: Seq.BOOLEAN,
+        defaultValue: false,
+      },
       createdAt: Seq.BIGINT,
       updatedAt: Seq.BIGINT,
     },

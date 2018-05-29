@@ -27,7 +27,6 @@ export const addGoods = {
     await Goods.create({
       id,
       ...goods,
-      isDeleted: 0,
     });
     return {
       id,
