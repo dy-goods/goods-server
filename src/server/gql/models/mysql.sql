@@ -24,7 +24,7 @@ create table if not exists `Goods` (
 
     `recommends` varchar(300) default '',
     `taobaoPrice` int default 0,
-    `discount` decimal default 0,
+    `discount` float default 0,
     `labels` varchar(300) default '',
 
     `isDeleted` int not null default 0,
