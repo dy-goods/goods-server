@@ -50,6 +50,9 @@ export class EntryController {
         <title>抖友好物说</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <meta http-equiv="x-dns-prefetch-control" content="on">
+        <link rel="dns-prefetch" href="//www.53zi.com">
+        <link rel="icon" href="/favicon.ico">
         <script>
           var fontSize = window.innerWidth / ${UE_WIDTH} * 75;
           document.documentElement.style.fontSize = fontSize + 'px';
