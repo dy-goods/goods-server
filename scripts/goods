@@ -11,7 +11,7 @@ server {
 
     # 处理静态文件/favicon.ico:
     location /favicon.ico {
-        root /srv/goods-server/statics;
+        root /srv/goods-server/src/client/assets/imgs;
     }
 
     # 处理静态资源:
