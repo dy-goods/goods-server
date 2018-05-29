@@ -98,7 +98,7 @@
       &::-webkit-scrollbar {
         display: none;
       }
-      li {
+      &>li {
         list-style: none;
         margin: 0;
         padding: 0;
@@ -116,7 +116,7 @@
           /*no*/
           border-right: 1px solid #E8DBCA;
           /*no*/
-          span {
+          div {
             border: none;
             padding: 0 13px;
             line-height: 40px;
@@ -132,9 +132,7 @@
           justify-content: center;
           flex-direction: column;
           border: none;
-          div {
-            text-align: center;
-          }
+          text-align: center;
           .text {
             font-family: NotoSansHans-Regular;
             font-size: 16px;
@@ -144,7 +142,7 @@
         }
         border-bottom: 1px solid #E8DBCA;
         /*no*/
-        &>span {
+        &>div {
           word-break: break-all;
           word-wrap: break-word;
           border-right: 1px solid #E8DBCA;
@@ -161,37 +159,53 @@
           }
         }
         .video-url {
-          flex: 218;
+          flex: 300;
+          video {
+            width: 200px;
+            height: 100px;
+          }
         }
         .stars {
           flex: 100;
         }
-        .discount {
-          flex: 50;
+        .share-count {
+          flex: 100;
         }
         .buy-count {
           flex: 100;
         }
-        .taobao-price {
-          flex: 100;
-        }
         .price {
-          flex: 50;
+          flex: 100;
         }
         .title {
-          flex: 100;
+          flex: 150;
         }
         .img-url {
-          flex: 270;
+          flex: 150;
+          img {
+            width: 100px;
+            height: 80px;
+          }
         }
         .tkl {
-          flex: 100;
+          flex: 150;
         }
-        .babels {
-          flex: 270;
+
+        .optional {
+          flex: 200;
+          ul {
+            margin: 0;
+            padding: 0;
+            li {
+              margin: 0;
+              padding: 0;
+              text-align: left;
+              list-style-position: inside;
+            }
+          }
         }
         .handle {
-          flex: 146;
+          flex: 150;
           display: flex;
           justify-content: space-between;
           span {

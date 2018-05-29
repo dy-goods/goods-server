@@ -10,14 +10,15 @@ export default async function test() {
     id: `d-${Date.now()}`,
     videoUrl: '视频连接',
     stars: 100, // 点赞数
-    discount: 0.9, // 折扣
     buyCount: 200, // 购买数量
-    taobaoPrice: 1000,
     price: 800, // 以分为单位
     title: '标题',
     imgUrl: '图片链接',
-    isDeleted: 0,
     tkl: '淘口令',
+
+    taobaoPrice: 1000,
+    discount: 0.9, // 折扣
+    isDeleted: 0,
     labels: '好玩到爆，省事的气球车', // 标签, eg好玩到爆，省事的气球车
   });
   console.log('created: ' + JSON.stringify(good, null, 2));

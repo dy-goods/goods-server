@@ -4,6 +4,7 @@ import './index.scss';
 import Alert from '../../../components/Alert';
 import { toast } from '../../../components/Toast';
 import stores from '../../../stores';
+import { priceText } from '../../../utils';
 
 type IProps = {
   isCreateGoods: boolean;
@@ -21,20 +22,26 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     const goods = (this.props.goods || {}) as GOODS.IUpdateInput;
+    const _getPrice = (value?: number) => {
+      return Number(priceText(value || 0, '')) || 0;
+    };
     this.state = {
       isCreateUpdateing: false,
       isAlertShow: true,
       form: {
         videoUrl: goods.videoUrl || '',
         stars: goods.stars || 0, // 点赞数
-        discount: goods.discount || 0, // 折扣
+        shareCount: goods.shareCount || 0,
         buyCount: goods.buyCount || 0, // 购买数量
-        taobaoPrice: goods.taobaoPrice || 0,
-        price: goods.price || 0, // 以分为单位
+        price: _getPrice(goods.price || 0), // 以分为单位
         title: goods.title || '',
         imgUrl: goods.imgUrl || '',
-        labels: goods.labels || '', // 标签, eg好玩到爆，省事的气球车
         tkl: goods.tkl || '',
+
+        recommends: goods.recommends || '',
+        discount: goods.discount || 0, // 折扣
+        taobaoPrice: _getPrice(goods.taobaoPrice || 0),
+        labels: goods.labels || '', // 标签, eg好玩到爆，省事的气球车
       },
     };
     this.updateGoods = this.updateGoods.bind(this);
@@ -44,32 +51,46 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
     const {
       videoUrl,
       stars,
-      discount,
+      shareCount,
       buyCount,
-      taobaoPrice,
       price,
       title,
       imgUrl,
-      labels,
       tkl,
     } = this.state.form;
     return !(
       videoUrl &&
       stars &&
-      discount &&
+      shareCount &&
       buyCount &&
-      taobaoPrice &&
       price &&
       title &&
       imgUrl &&
-      tkl &&
-      labels
+      tkl
     );
+  }
+  transformGoods() {
+    const form = this.state.form as {
+      [key: string]: any;
+    };
+    const keys = Object.keys(form);
+    for (const key of keys) {
+      if (['stars', 'shareCount', 'buyCount', 'discount'].includes(key)) {
+        form[key] = Number(form[key]);
+      }
+      if (['price', 'taobaoPrice'].includes(key)) {
+        form[key] = Number(form[key]) * 100;
+      }
+      this.setState({
+        form: form as any,
+      });
+    }
   }
   async createGoods() {
     this.setState({
       isCreateUpdateing: true,
     });
+    this.transformGoods();
     const ret = await stores.goodsStore.addGoos(this.state.form);
     toast(`添加${ret ? '成功' : '失败'}`);
     if (ret) {
@@ -86,6 +107,7 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
     this.setState({
       isCreateUpdateing: true,
     });
+    this.transformGoods();
     const ret = await stores.goodsStore.updateGoods({
       id: this.props.goods.id,
       ...this.state.form,
@@ -117,71 +139,52 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
         <div className="create-update-goods">
           <ul className="list">
             <li className="test">
-              <span>视频链接</span>
+              <div>视频链接</div>
               <input
                 type="text"
-                placeholder="请输入"
+                placeholder="请输入七牛云视频链接"
                 value={this.state.form.videoUrl}
                 onChange={e => this.setGoodsAttr(e.target.value, 'videoUrl')}
               />
             </li>
             <li className="test">
-              <span>点赞数</span>
+              <div>点赞数</div>
               <input
                 type="text"
                 placeholder="请输入"
                 value={this.state.form.stars || ''}
-                onChange={e =>
-                  this.setGoodsAttr(Number(e.target.value), 'stars')
-                }
+                onChange={e => this.setGoodsAttr(e.target.value, 'stars')}
               />
             </li>
             <li className="test">
-              <span>折扣</span>
+              <div>分享数量</div>
               <input
                 type="text"
                 placeholder="请输入"
-                value={this.state.form.discount || ''}
-                onChange={e =>
-                  this.setGoodsAttr(Number(e.target.value), 'discount')
-                }
+                value={this.state.form.shareCount || ''}
+                onChange={e => this.setGoodsAttr(e.target.value, 'shareCount')}
               />
             </li>
             <li className="test">
-              <span>购买数量</span>
+              <div>购买数量</div>
               <input
                 type="text"
                 placeholder="请输入"
                 value={this.state.form.buyCount || ''}
-                onChange={e =>
-                  this.setGoodsAttr(Number(e.target.value), 'buyCount')
-                }
+                onChange={e => this.setGoodsAttr(e.target.value, 'buyCount')}
               />
             </li>
             <li className="test">
-              <span>淘宝价格</span>
+              <div>价格</div>
               <input
                 type="text"
-                placeholder="请输入"
-                value={this.state.form.taobaoPrice || ''}
-                onChange={e =>
-                  this.setGoodsAttr(Number(e.target.value), 'taobaoPrice')
-                }
-              />
-            </li>
-            <li className="test">
-              <span>价格，以分为单位</span>
-              <input
-                type="text"
-                placeholder="请输入"
+                placeholder="请输入, eg: 1.11"
                 value={this.state.form.price || ''}
-                onChange={e =>
-                  this.setGoodsAttr(Number(e.target.value), 'price')
-                }
+                onChange={e => this.setGoodsAttr(e.target.value, 'price')}
               />
             </li>
             <li className="test">
-              <span>标题</span>
+              <div>标题</div>
               <input
                 type="text"
                 placeholder="请输入"
@@ -190,16 +193,16 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
               />
             </li>
             <li className="test">
-              <span>图片链接</span>
+              <div>图片链接</div>
               <input
                 type="text"
-                placeholder="请输入"
+                placeholder="请输入七牛云图片链接"
                 value={this.state.form.imgUrl}
                 onChange={e => this.setGoodsAttr(e.target.value, 'imgUrl')}
               />
             </li>
             <li className="test">
-              <span>淘口令</span>
+              <div>淘口令</div>
               <input
                 type="text"
                 placeholder="请输入"
@@ -207,12 +210,40 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
                 onChange={e => this.setGoodsAttr(e.target.value, 'tkl')}
               />
             </li>
+
             <li className="test">
-              <span>标签, eg好玩到爆，省事的气球车</span>
+              <div className="optional">推荐语</div>
               <input
                 type="text"
                 placeholder="请输入"
-                value={this.state.form.labels}
+                value={this.state.form.recommends || ''}
+                onChange={e => this.setGoodsAttr(e.target.value, 'recommends')}
+              />
+            </li>
+            <li className="test">
+              <div className="optional">淘宝价格</div>
+              <input
+                type="text"
+                placeholder="请输入"
+                value={this.state.form.taobaoPrice || ''}
+                onChange={e => this.setGoodsAttr(e.target.value, 'taobaoPrice')}
+              />
+            </li>
+            <li className="test">
+              <div className="optional">折扣</div>
+              <input
+                type="text"
+                placeholder="请输入,eg: 6.6"
+                value={this.state.form.discount || ''}
+                onChange={e => this.setGoodsAttr(e.target.value, 'discount')}
+              />
+            </li>
+            <li className="test">
+              <div className="optional">标签</div>
+              <input
+                type="text"
+                placeholder="请输入,eg: 好玩到爆,省事的气球车(以英文逗号分隔)"
+                value={this.state.form.labels || ''}
                 onChange={e => this.setGoodsAttr(e.target.value, 'labels')}
               />
             </li>

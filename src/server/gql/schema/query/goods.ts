@@ -24,6 +24,7 @@ export const goods: FieldConfig = {
     const items = await Goods.findAll<GOODS.IGoodsType>({
       offset: (pageNo - 1) * pageSize,
       limit: pageSize,
+      order: 'createdAt DESC',
       where: {
         isDeleted: 0,
       },
