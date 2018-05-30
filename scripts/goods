@@ -10,7 +10,7 @@ server {
 
     # 处理静态文件/favicon.ico:
     location /favicon.ico {
-        root /srv/goods-server/src/client/assets/imgs/favicon.ico;
+        root /srv/goods-server/src/client/assets;
     }
 
     # 处理静态资源:
