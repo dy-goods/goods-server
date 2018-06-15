@@ -212,6 +212,15 @@ export default class CreateUpdateGoods extends React.Component<IProps, IState> {
             </li>
 
             <li className="test">
+              <div className="optional">poster</div>
+              <input
+                type="text"
+                placeholder="转发用的图片，video元素的poster属性"
+                value={this.state.form.poster || ''}
+                onChange={e => this.setGoodsAttr(e.target.value, 'poster')}
+              />
+            </li>
+            <li className="test">
               <div className="optional">推荐语</div>
               <input
                 type="text"

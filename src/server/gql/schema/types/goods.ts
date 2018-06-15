@@ -49,6 +49,10 @@ export const GoodsType = new GraphQLObjectType({
       description: '淘口令',
     },
 
+    poster: {
+      type: GraphQLString,
+      description: '转发用的图片，video元素的poster属性',
+    },
     recommends: {
       type: GraphQLString,
       description: '推荐语',
@@ -164,6 +168,10 @@ export const AddGoodsInputType = new GraphQLInputObjectType({
       description: '淘口令',
     },
 
+    poster: {
+      type: GraphQLString,
+      description: '转发用的图片，video元素的poster属性',
+    },
     recommends: {
       type: GraphQLString,
       description: '推荐语',
@@ -223,6 +231,10 @@ export const UpdateGoodsInputType = new GraphQLInputObjectType({
       description: '淘口令',
     },
 
+    poster: {
+      type: GraphQLString,
+      description: '转发用的图片，video元素的poster属性',
+    },
     recommends: {
       type: GraphQLString,
       description: '推荐语',

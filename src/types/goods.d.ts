@@ -28,6 +28,7 @@ declare namespace GOODS {
     imgUrl: string; // 图片链接
     tkl: string; // 淘口令
 
+    poster?: string; // 转发用的图片，video元素的poster属性
     recommends?: string; // 推荐语
     taobaoPrice?: number; // 淘宝价格
     discount?: number; // 折扣
