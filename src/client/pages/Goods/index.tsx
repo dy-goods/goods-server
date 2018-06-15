@@ -115,21 +115,26 @@ export default class GoodsPage extends React.Component<IProps, IState> {
                     <div className="tkl">{goods.tkl}</div>
                     <div className="optional">
                       <ul>
-                        {goods.recommends && (
+                        {!!goods.recommends && (
                           <li className="recommends">
                             推荐语：{goods.recommends}
                           </li>
                         )}
-                        {goods.taobaoPrice && (
+                        {!!goods.taobaoPrice && (
                           <li className="taobao-price">
                             淘宝价格：{priceText(goods.taobaoPrice)}
                           </li>
                         )}
-                        {goods.discount && (
+                        {!!goods.discount && (
                           <li className="discount">折扣：{goods.discount}折</li>
                         )}
-                        {goods.labels && (
+                        {!!goods.labels && (
                           <li className="labels">标签：{goods.labels}</li>
+                        )}
+                        {!!goods.poster && (
+                          <li className="labels">
+                            标签：<img src={goods.imgUrl} alt="" />
+                          </li>
                         )}
                       </ul>
                     </div>

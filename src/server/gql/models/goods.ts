@@ -18,6 +18,10 @@ export default function(sequelize: Sequelize) {
       imgUrl: Seq.STRING(300),
       tkl: Seq.STRING(300),
 
+      poster: {
+        type: Seq.STRING(300),
+        defaultValue: '',
+      },
       recommends: {
         type: Seq.STRING(300),
         defaultValue: '',

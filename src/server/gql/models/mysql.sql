@@ -22,6 +22,7 @@ create table if not exists `Goods` (
     `imgUrl` varchar(300) not null,
     `tkl` varchar(300) not null,
 
+    `poster` varchar(300) default '',
     `recommends` varchar(300) default '',
     `taobaoPrice` int default 0,
     `discount` float default 0,
