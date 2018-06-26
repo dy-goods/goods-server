@@ -9,5 +9,6 @@ module.exports = {
   webpack: {
     port: 9091,
   },
-  onlineHost: 'http://www.53zi.com',
+  onlineHost: '//www.53zi.com',
+  graphqlUri: '//www.53zi.com/graphql',
 };

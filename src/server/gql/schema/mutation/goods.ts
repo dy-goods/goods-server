@@ -27,7 +27,6 @@ export const addGoods = {
     await Goods.create({
       id,
       ...goods,
-      isDeleted: false,
     });
     return {
       id,
@@ -80,7 +79,7 @@ export const deleteGoods = {
         id,
       },
     });
-    goods.isDeleted = true;
+    goods.isDeleted = 1;
     await goods.save();
     return true;
   },

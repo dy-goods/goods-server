@@ -1,6 +1,7 @@
 import * as path from 'path';
 import * as config from 'config';
 import { route } from './decorator';
+const UE_WIDTH = 1366;
 
 /**
  * 前端构建信息
@@ -39,9 +40,9 @@ export class EntryController {
      */
     const mainFile = buildMeta['app'] || 'app.js';
 
-    const isProd = config.get('isProd');
     const browserConfig = {
-      prod: isProd,
+      prod: config.get('isProd'),
+      graphqlUri: config.get('graphqlUri'),
     };
 
     return `<html>
@@ -49,8 +50,11 @@ export class EntryController {
         <title>抖友好物说</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <meta http-equiv="x-dns-prefetch-control" content="on">
+        <link rel="dns-prefetch" href="//www.53zi.com">
+        <link rel="icon" href="/favicon.ico">
         <script>
-          var fontSize = window.innerWidth / 1024 * 75;
+          var fontSize = window.innerWidth / ${UE_WIDTH} * 75;
           document.documentElement.style.fontSize = fontSize + 'px';
         </script>
       </head>

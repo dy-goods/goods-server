@@ -1,9 +1,5 @@
 server {
-    listen 80 default;
-    return 403;
-}
-server {
-    listen      80; # 监听80端口
+    listen 443 ssl; # managed by Certbot
     server_name www.53zi.com; # 配置域名
 
     access_log /srv/goods-server/logs/nginx/access_log;
@@ -11,7 +7,7 @@ server {
 
     # 处理静态文件/favicon.ico:
     location /favicon.ico {
-        root /srv/goods-server/statics;
+        root /srv/goods-server/src/client/assets;
     }
 
     # 处理静态资源:
@@ -26,4 +22,14 @@ server {
         proxy_set_header Host $host;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
+
+}
+server {
+    if ($host = www.53zi.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    listen      80;
+    server_name www.53zi.com;
+    return 403; # managed by Certbot
 }

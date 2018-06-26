@@ -13,7 +13,7 @@ export default class Loading extends React.Component<IPros> {
   getDivList(count: number) {
     const list = [];
     for (let i = 0; i < count; i++) {
-      list.push(<div />);
+      list.push(<div key={i} />);
     }
     return list;
   }
