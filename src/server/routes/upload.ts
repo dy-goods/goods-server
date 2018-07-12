@@ -49,4 +49,22 @@ export class UploadController {
       urls: fileNames.map(fileName => `${ctx.host}/statics/${fileName}`),
     };
   }
+
+  @route('get', '/append')
+  appendImage(ctx: Context) {
+    imageMagick(path.resolve(config.get('root'), `./statics/bg2018061423.jpg`))
+      .append(path.resolve(config.get('root'), './statics/161371_large.png'))
+      .append(path.resolve(config.get('root'), './statics/161371_large.png'))
+      .write(
+        path.resolve(config.get('root'), `./statics/new.png`),
+        (err: Error) => {
+          if (!err) {
+            console.log('Written composite image.');
+          } else {
+            console.error(err);
+          }
+        },
+      );
+    return `<img src="${ctx.protocol}://${ctx.host}/statics/new.png" />`;
+  }
 }
