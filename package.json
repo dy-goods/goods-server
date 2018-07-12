@@ -10,19 +10,20 @@
     "watch": "tsc -p src/server -w --pretty",
     "server": "cross-env NODE_ENV=development node --inspect=9092 dist/server/",
     "predev": "concurrently \"del -f ./dist/*\" \"tsc -p src/server\"",
-    "dev":
-      "concurrently --names \"TSC,NODE\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm run watch\" \"npm run server\"",
+    "dev": "concurrently --names \"TSC,NODE\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm run watch\" \"npm run server\"",
     "build": "cross-env NODE_ENV=production node scripts/build",
-    "lint.client":
-      "tslint -p src/client/tsconfig.json -e *.d.ts -c tslint.json",
-    "lint.server":
-      "tslint -p src/server/tsconfig.json -e *.d.ts -c tslint.json",
+    "lint.client": "tslint -p src/client/tsconfig.json -e *.d.ts -c tslint.json",
+    "lint.server": "tslint -p src/server/tsconfig.json -e *.d.ts -c tslint.json",
     "lint.fix": "prettier --write \"./**/*.{js,tsx,ts}\""
   },
-  "pre-commit": ["lint.client", "lint.server"],
+  "pre-commit": [
+    "lint.client",
+    "lint.server"
+  ],
   "dependencies": {
     "axios": "^0.15.3",
     "config": "^1.25.1",
+    "gm": "^1.23.1",
     "graphql": "0.11.7",
     "ip": "^1.1.5",
     "ip-address": "^5.8.8",
@@ -44,6 +45,7 @@
     "@types/config": "^0.0.34",
     "@types/debug": "^0.0.30",
     "@types/formidable": "^1.0.31",
+    "@types/gm": "^1.18.0",
     "@types/graphql": "0.11.5",
     "@types/ip": "^0.0.30",
     "@types/koa-router": "^7.0.22",
