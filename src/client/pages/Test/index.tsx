@@ -52,7 +52,7 @@ export default class TestPage extends React.Component<IProps, IState> {
         <h3>Demo1:选取一张图片，并预览</h3>
         <input
           id="img_input"
-          type="file"
+          type="file" // accept="image/*"
           onChange={this.upload.bind(this)}
           multiple={true}
         />
