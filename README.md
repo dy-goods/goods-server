@@ -1,6 +1,6 @@
 # 抖友好物说
 
-# GitHook配置*
+# GitHook 配置\*
 
 ```bash
 $ yarn add --dev pre-commit
@@ -8,7 +8,7 @@ $ yarn add --dev pre-commit
 
 ## 一、代码提交规范
 
-1. 保证提交的用户信息是准确的
+1.  保证提交的用户信息是准确的
 
 ```bash
 $ git config --local user.name '周新凯' # 你的中文姓名
@@ -19,13 +19,13 @@ $ git config --local user.email '846673264@qq.com'
 
 #### 1. 使用`Git Flow`模型
 
-- master
-- develop
-- feature/v1.0
-- feature/v2.0
-- release/v1.0
+* master
+* develop
+* feature/v1.0
+* feature/v2.0
+* release/v1.0
 
-每进行一个版本的开发就会创建一个`feature`分支，完成一个版本的开发就会创建一个`release`分支，确定功能都OK了就进行`finish`操作合并到`master`分支并打一个`tag`。
+每进行一个版本的开发就会创建一个`feature`分支，完成一个版本的开发就会创建一个`release`分支，确定功能都 OK 了就进行`finish`操作合并到`master`分支并打一个`tag`。
 
 ```
 master -----------------------------------------o------
@@ -42,19 +42,19 @@ develop ---o------------------------------o---/--------
 
 #### 2. 使用`Fork`开发流
 
-代码的同步是从upstream拉取的
+代码的同步是从 upstream 拉取的
 
 ```
 local <- pull <- upstream
 ```
 
-代码的提交是通过PR的方式
+代码的提交是通过 PR 的方式
 
 ```
 local -> push -> origin -> pull request -> upstream
 ```
 
-upstream配置
+upstream 配置
 
 ```bash
 $ gt remote add upstream https://github.com/dy-goods/goods-server.git
@@ -72,9 +72,13 @@ $ git push origin feature/0.1.0 # 推送代码到origin仓库
 ## 三、运行
 
 ```bash
+$ sudo add-apt-repository ppa:dhor/myway
+$ sudo apt-get update
+$ sudo apt-get install graphicsmagick
+$ sudo apt-get install imagemagick
 $ yarn
 $ yarn dev
 ```
-- 127.0.0.1:9090/是客户端
-- 127.0.0.1:9090/graphql是graphql服务
 
+* 127.0.0.1:9090/是客户端
+* 127.0.0.1:9090/graphql 是 graphql 服务
