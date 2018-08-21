@@ -1,5 +1,31 @@
 .test-page {
-  h1 {
-    color: red;
+  /*
+ * Demo1:选取一张图片，并预览
+ */
+  .preview_box img {
+    width: 200px;
+  }
+  /*
+ * Demo2:拖拽上传
+ */
+  #drop_zone {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #000;
+  }
+  /*
+ * Demo3:label样式
+ */
+  #img_input2 {
+    display: none;
+  }
+  #img_label2 {
+    background-color: #f2d547;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px;
+  }
+  #preview_box2 img {
+    width: 200px;
   }
 }
